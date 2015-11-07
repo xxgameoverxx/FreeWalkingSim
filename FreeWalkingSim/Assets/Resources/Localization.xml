@@ -1,0 +1,245 @@
+<Root>
+  <LocalText name="newGame">
+    <En>New Game</En>
+    <Tr>Yeni Oyun</Tr>
+  </LocalText>
+  <LocalText name="creditsButton">
+    <En>Credits</En>
+    <Tr>Emeği Geçenler</Tr>
+  </LocalText>
+  <LocalText name="quit">
+    <En>Quit</En>
+    <Tr>Çıkış</Tr>
+  </LocalText>
+  <LocalText name="freezing">
+    <En>It's freezing. I need to set fire first.</En>
+    <Tr>Donuyorum, önce ısınmam lazım.</Tr>
+  </LocalText>
+  <LocalText name="tooDark">
+    <En>It's too dark. I cannot see.</En>
+    <Tr>Çok karanlık, hiçbir şey göremiyorum.</Tr>
+  </LocalText>
+  <LocalText name="candleName">
+    <En>Candle</En>
+    <Tr>Mum</Tr>
+  </LocalText>
+  <LocalText name="candleDescription">
+    <En>An ordinary candle.</En>
+    <Tr>Sıradan bir mum.</Tr>
+  </LocalText>
+  <LocalText name="gramaphoneName">
+    <En>Gramaphone</En>
+    <Tr>Gramafon</Tr>
+  </LocalText>
+  <LocalText name="gramaphoneDecription">
+    <En>An old gramophone. Still works.</En>
+    <Tr>Eski bir gramafon. Hala çalışıyor.</Tr>
+  </LocalText>
+  <LocalText name="fireplaceName">
+    <En>Fireplace</En>
+    <Tr>Şömine</Tr>
+  </LocalText>
+  <LocalText name="fireplaceDescription">
+    <En>A fireplace</En>
+    <Tr>Bir şömine</Tr>
+  </LocalText>
+  <LocalText name="needPaper">
+    <En>I need some paper to light this.</En>
+    <Tr>Tutuşturmak için kağıda ihtiyacım var.</Tr>
+  </LocalText>
+  <LocalText name="paperBoxName">
+    <En>Paper box</En>
+    <Tr>Kağıt kutusu</Tr>
+  </LocalText>
+  <LocalText name="paperBoxDescription">
+    <En>A box full of papers. Seems unimportant.</En>
+    <Tr>Gereksiz kağıtlarla dolu bir kutu.</Tr>
+  </LocalText>
+  <LocalText name="paperTaken">
+    <En>I took few papers.</En>
+    <Tr>Birkaç kağıt aldım.</Tr>
+  </LocalText>
+  <LocalText name="papers">
+    <En>Paper</En>
+    <Tr>Kağıtlar</Tr>
+  </LocalText>
+  <LocalText name="objectNeeded">
+    <En> is needed.</En>
+    <Tr> lazım.</Tr>
+  </LocalText>
+  <LocalText name="matchName">
+    <En>Matchbox</En>
+    <Tr>Kibrit Kutusu</Tr>
+  </LocalText>
+  <LocalText name="matchDescription">
+    <En>A box full of matches</En>
+    <Tr>Dolu bir kibrit kutusu</Tr>
+  </LocalText>
+  <LocalText name="move">
+    <En>Move</En>
+    <Tr>Hareket</Tr>
+  </LocalText>
+  <LocalText name="look">
+    <En>Look Around</En>
+    <Tr>Etrafa Bak</Tr>
+  </LocalText>
+  <LocalText name="describe">
+    <En>Describe</En>
+    <Tr>İncele</Tr>
+  </LocalText>
+  <LocalText name="use">
+    <En>Use</En>
+    <Tr>Kullan</Tr>
+  </LocalText>
+  <LocalText name="storySoFar">
+    <En>A very tragic story :(</En>
+    <Tr>Çok trajik bir hikaye :(</Tr>
+  </LocalText>
+  <LocalText name="storySoFarComment">
+    <En>Nah, it isn't so tragic.</En>
+    <Tr>Yok la o kadar da değilmiş.</Tr>
+  </LocalText>
+  <LocalText name="credits">
+    <En>
+      This game was developed by Anton Semchenko
+      for e-bergi.com with purpose of writing
+      a guide about creating games with free assets.
+      As such, most of visual and sound assets were downloaded
+      from internet as "royalty free assets".
+      Following assets were used...
+    </En>
+    <Tr>
+      Bu oyun Anton Semchenko tarafından
+      e-bergi.com için bedavaya oyun geliştirme
+      rehberi yazmak amacı ile geliştirilmiştir. Bu
+      nedenle oyundaki görsellerin ve seslerin tamamına
+      yakın bir kısmı internetten indirilmiştir. Bu ses
+      ve görüntülerin tamamı ticari ürünlerde hiçbir
+      ücret ödemeksizin kullanılabilirler.
+      Kullanılan ses ve görüntüler şu sitelerden indirilmiştir...
+    </Tr>
+  </LocalText>
+  <LocalText name="usedAssets">
+    <En>
+      Town Creator Kit LITE:
+      www.assetstore.unity3d.com/en/#!/content/25574
+      Books
+      www.assetstore.unity3d.com/en/#!/content/3356
+      Rustic, Knobby Door
+      www.assetstore.unity3d.com/en/#!/content/860
+      Rustic, Wooden Door
+      www.assetstore.unity3d.com/en/#!/content/861
+      Steel Window
+      www.assetstore.unity3d.com/en/#!/content/650
+      Medieval Props
+      www.assetstore.unity3d.com/en/#!/content/41540
+      Magic Lamp
+      www.assetstore.unity3d.com/en/#!/content/9249
+    </En>
+    <Tr>
+      Town Creator Kit LITE:
+      www.assetstore.unity3d.com/en/#!/content/25574
+      Books
+      www.assetstore.unity3d.com/en/#!/content/3356
+      Rustic, Knobby Door
+      www.assetstore.unity3d.com/en/#!/content/860
+      Rustic, Wooden Door
+      www.assetstore.unity3d.com/en/#!/content/861
+      Steel Window
+      www.assetstore.unity3d.com/en/#!/content/650
+      Medieval Props
+      www.assetstore.unity3d.com/en/#!/content/41540
+      Magic Lamp
+      www.assetstore.unity3d.com/en/#!/content/9249
+    </Tr>
+  </LocalText>
+  <LocalText name="usedAssets2">
+    <En>
+      Animated Old Chest
+      www.assetstore.unity3d.com/en/#!/content/20179
+      Worn Bookshelf
+      www.assetstore.unity3d.com/en/#!/content/8458
+      Alchemy Station
+      www.assetstore.unity3d.com/en/#!/content/38304
+      Animated Spell Book
+      www.assetstore.unity3d.com/en/#!/content/23742
+      Notebook
+      opengameart.org/content/notebook-eaten-by-mice
+      Icons made by Freepik from www.flaticon.com
+      Font
+      www.kimberlygeswein.com/
+
+      Wind Machine (Ambient Sound)
+      www.looperman.com/loops/detail/30119/wind-machine-by-planetjazzbass-free-120bpm-classical-percussion-loop
+    </En>
+    <Tr>
+      Animated Old Chest
+      www.assetstore.unity3d.com/en/#!/content/20179
+      Worn Bookshelf
+      www.assetstore.unity3d.com/en/#!/content/8458
+      Alchemy Station
+      www.assetstore.unity3d.com/en/#!/content/38304
+      Animated Spell Book
+      www.assetstore.unity3d.com/en/#!/content/23742
+      Notebook
+      opengameart.org/content/notebook-eaten-by-mice
+      Icons made by Freepik from www.flaticon.com
+      Font
+      www.kimberlygeswein.com/
+
+      Wind Machine (Ambient Sound)
+      www.looperman.com/loops/detail/30119/wind-machine-by-planetjazzbass-free-120bpm-classical-percussion-loop
+    </Tr>
+  </LocalText>
+  <LocalText name="thanks">
+    <En>
+      Thanks to
+
+      Middle East Technical University
+      Computer Club,
+
+      All e-bergi.com editors and
+      it's readers,
+
+      Instructor of Interactive Multimedia
+      Design course Emrecan Çubukçu,
+
+      You, for playing,
+
+      And most of all to all good people who
+      created these awesome free assets.
+    </En>
+    <Tr>
+      Orta Doğu Teknik Üniversitesi
+      Bilgisayar Topluluğu'na
+
+      e-bergi.com editörleri ve
+      okurlarına
+
+      Interactive Multimedia Design dersinin
+      hocası Emrecan Çubukçu'ya
+
+      Bu oyunu oynadığınız için
+      size,
+
+      Ve en önemlisi ücretsiz ses ve görsel
+      yapan muhteşem insalara
+
+      Teşekkür ederim.
+    </Tr>
+  </LocalText>
+  <LocalText name="anton">
+    <En>
+      For contact and my other projects visit
+      anton.website
+    </En>
+    <Tr>
+      İletişim ve diğer projelerim için
+      anton.website
+    </Tr>
+  </LocalText>
+  <LocalText name="">
+    <En></En>
+    <Tr></Tr>
+  </LocalText>
+</Root>
