@@ -483,6 +483,14 @@
     <En>I would love to but I really don't have time.</En>
     <Tr>Çok isterdim fakat gerçekten zamanım yok.</Tr>
   </LocalText>
+  <LocalText name="keySpawn">
+    <En>Something is fell in the other room!</En>
+    <Tr>Yan odada bir şey düştü!</Tr>
+  </LocalText>
+  <LocalText name="outro">
+    <En>And so my journey began...</En>
+    <Tr>Yolculuğum işte böyle başladı...</Tr>
+  </LocalText>
   <LocalText name="credits">
     <En>
       This game was developed by Anton Semchenko

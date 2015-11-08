@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     private ObjectHolder objectHolder;
 
     private Action showTutorialAction;
+    private Action endGameAction;
 
     public GameObject goldenKey;
 
@@ -43,6 +44,7 @@ public class GameManager : MonoBehaviour
     {
         CenterMouse.Instance().Start();
         showTutorialAction += ShowTutorial;
+        endGameAction += EndGame;
         if (Application.loadedLevelName == "GameScene")
             Init();
     }
@@ -82,8 +84,18 @@ public class GameManager : MonoBehaviour
 
     public void SpellBookUsed()
     {
-        Debug.Log("Shit happens");
+        UIHolder.Instance().WriteText(Localizer.Instance().Get("keySpawn"));
         goldenKey.SetActive(true);
+    }
+
+    public void GoldenDoorOpened()
+    {
+        modalPanel.Register(new PopUpMessage(Localizer.Instance().Get("outro"), "", endGameAction));
+    }
+
+    private void EndGame()
+    {
+        Application.LoadLevel("MainMenu");
     }
 
     public void OnPauseMenu()

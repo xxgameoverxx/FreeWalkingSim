@@ -49,7 +49,7 @@ public class ObjectHolder : MonoBehaviour
         pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
         player = GameObject.FindObjectOfType<FirstPersonController>();
 
-        if (manager.inGame)
+        if (GameObject.FindGameObjectWithTag("BlackWhiteToggle") != null)
         {
             blackWhiteToggle = GameObject.FindGameObjectWithTag("BlackWhiteToggle").GetComponent<Toggle>();
             noiseToggle = GameObject.FindGameObjectWithTag("NoiseToggle").GetComponent<Toggle>();
