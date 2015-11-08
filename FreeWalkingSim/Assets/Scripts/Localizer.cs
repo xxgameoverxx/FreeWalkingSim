@@ -29,13 +29,13 @@ public class Localizer : MonoBehaviour
     public string currentLanguage = "Tr";
     static Dictionary<string, LocalText> localTextDict = new Dictionary<string, LocalText>();
 
-    public Action lagaugeChangedAction;
-
+    public Action langaugeChangedAction;
 
     void Awake()
     {
         localTextDict = new Dictionary<string, LocalText>();
         ReadLaguageFile();
+        DontDestroyOnLoad(this);
     }
 
     void Update()
@@ -64,7 +64,7 @@ public class Localizer : MonoBehaviour
     public void ChangeLanguage(string language)
     {
         currentLanguage = language;
-        lagaugeChangedAction.Invoke();
+        langaugeChangedAction.Invoke();
     }
 
     void ReadLaguageFile()

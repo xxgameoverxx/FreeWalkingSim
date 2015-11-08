@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System;
 
 public class Local : MonoBehaviour
 {
@@ -9,17 +10,22 @@ public class Local : MonoBehaviour
     Text txt;
     Localizer localizer;
 
-    void Awake()
+    void Start()
     {
         localizer = Localizer.Instance();
         txt = GetComponent<Text>();
         textName = txt.text;
         OnLaguageChange();
-        localizer.lagaugeChangedAction += OnLaguageChange;
+        localizer.langaugeChangedAction += OnLaguageChange;
     }
 
     public void OnLaguageChange()
     {
+        if (this == null)
+        {
+            localizer.langaugeChangedAction -= OnLaguageChange;
+            return;
+        }
         if (txt == null)
         {
             Debug.LogError("There is no text component on " + this);

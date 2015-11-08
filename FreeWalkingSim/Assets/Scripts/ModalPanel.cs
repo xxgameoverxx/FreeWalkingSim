@@ -93,7 +93,7 @@ public class ModalPanel : MonoBehaviour
     public void Unregister(PopUpMessage message)
     {
         if (GameManager.Instance().inGame)
-            uiHolder.WriteText(localizer.Get(message.afterMessage));
+            uiHolder.WriteText(message.afterMessage);
         if(message.gotTheMessage != null)
             message.gotTheMessage.Invoke();
     

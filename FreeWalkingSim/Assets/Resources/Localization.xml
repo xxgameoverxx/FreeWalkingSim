@@ -11,6 +11,10 @@
     <En>Quit</En>
     <Tr>Çıkış</Tr>
   </LocalText>
+  <LocalText name="...">
+    <En>...</En>
+    <Tr>...</Tr>
+  </LocalText>
   <LocalText name="freezing">
     <En>It's freezing. I need to set fire first.</En>
     <Tr>Donuyorum, önce ısınmam lazım.</Tr>
@@ -98,6 +102,194 @@
   <LocalText name="storySoFarComment">
     <En>Nah, it isn't so tragic.</En>
     <Tr>Yok la o kadar da değilmiş.</Tr>
+  </LocalText>
+  <LocalText name="chestName">
+    <En>Chest</En>
+    <Tr>Sandık</Tr>
+  </LocalText>
+  <LocalText name="chestDescription">
+    <En>An odd looking chest.</En>
+    <Tr>Garip bir sandık.</Tr>
+  </LocalText>
+  <LocalText name="weirdBookName">
+    <En>Weird Book</En>
+    <Tr>Garip Kitap</Tr>
+  </LocalText>
+  <LocalText name="weirdBookDescription">
+    <En>A weird looking book.</En>
+    <Tr>Garip görünümlü bir kitap.</Tr>
+  </LocalText>
+  <LocalText name="lampName">
+    <En>Lamp</En>
+    <Tr>Lamba</Tr>
+  </LocalText>
+  <LocalText name="lampDescription">
+    <En>An eccentric lamp</En>
+    <Tr>Ekzantik bir lamba</Tr>
+  </LocalText>
+  <LocalText name="lampTried">
+    <En>No ginnie... Well, at least I tried.</En>
+    <Tr>Cin yok... En azından denedim.</Tr>
+  </LocalText>
+  <LocalText name="cauldronName">
+    <En>Cauldron</En>
+    <Tr>Kazan</Tr>
+  </LocalText>
+  <LocalText name="cauldronDescription">
+    <En>A cauldron filled with water.</En>
+    <Tr>Su dolu bir kazan.</Tr>
+  </LocalText>
+  <LocalText name="fathersJournalName">
+    <En>Father's journal</En>
+    <Tr>Babamın günlüğü</Tr>
+  </LocalText>
+  <LocalText name="fathersJournalDescription">
+    <En>My father's journal.</En>
+    <Tr>Babamın günlüğü</Tr>
+  </LocalText>
+  <LocalText name="fathersJournalText">
+    <En>Huh. He read alot of books and loved many of them. May be there is a clue somewhere...</En>
+    <Tr>Hmm. Babam sürekli kitap okurdu ve sevdiği birçok kitap vardı. Belki buralarda bir ipucu bulurum...</Tr>
+  </LocalText>
+  <LocalText name="fathersJournalPopUp">
+    <En>Some story. Clue: My favorite book is the key.</En>
+    <Tr>Biraz hikaye. İpucu: anahtar en sevdiğim kitap.</Tr>
+  </LocalText>
+  <LocalText name="encryptedJournalName">
+    <En>Encrypted journal</En>
+    <Tr>Şifreli günlük</Tr>
+  </LocalText>
+  <LocalText name="encryptedJournalDescription">
+    <En>An encrypted journal written by my father. He used to write similar messages which would give me a clue about some gift, when i was a little. I need some specific book to read this.</En>
+    <Tr>Babam tarafından yazılmış şifreli bir günlük. Ben küçükken hediyeleri sakladığı yerleri gösterecek ipuçlarını bu şekilde yazardı. Çözmek için spesifik bir kitaba ihtiyacım var.</Tr>
+  </LocalText>
+  <LocalText name="encryptedJournalText">
+    <En>Really, father. Am I need to learn cook NOW?!</En>
+    <Tr>Gerçekten mi baba? Tam olarak şu anda yemek pişirmeyi mi öğrenmemi istiyorsun?!</Tr>
+  </LocalText>
+  <LocalText name="encryptedJournalPopUp">
+    <En>Some other scarry story. Clue: key is in the cauldron.</En>
+    <Tr>Bir korkunçlu hikaye daha. İpucu: anahtar kazanın içinde.</Tr>
+  </LocalText>
+  <LocalText name="encrypted">
+    <En>This journal is encrypted. I need a specific book to decrypt it.</En>
+    <Tr>Bu günlük şifreli. Şifreyi çözmek için spesifik bir kitaba ihtiyacım var.</Tr>
+  </LocalText>
+  <LocalText name="verseName">
+    <En>Verse</En>
+    <Tr>Dize</Tr>
+  </LocalText>
+  <LocalText name="verseDescription">
+    <En>A verse.</En>
+    <Tr>Bir dize.</Tr>
+  </LocalText>
+  <LocalText name="verseText">
+    <En>Dante's Divine Comedy! This must the book I need to decrypt the journal!</En>
+    <Tr>Dante'nin İlahi Komedya'sı! Şifreyi çözmek için ihtiyacım olan kitap bu olmalı!</Tr>
+  </LocalText>
+  <LocalText name="verse">
+    <En>Abandon hope all ye who enter here.</En>
+    <Tr>Buraya giren tüm umutlarını kapıda bıraksın.</Tr>
+  </LocalText>
+  <LocalText name="spoonName">
+    <En>Spoon</En>
+    <Tr>Kaşık</Tr>
+  </LocalText>
+  <LocalText name="spoonDescription">
+    <En>A big wooden spoon</En>
+    <Tr>Büyük tahta bir kaşık</Tr>
+  </LocalText>
+  <LocalText name="spoonText">
+    <En>I got the wooden spoon.</En>
+    <Tr>Tahta kaşığı aldım.</Tr>
+  </LocalText>
+  <LocalText name="dontNeedSpoon">
+    <En>I'm not hungry.</En>
+    <Tr>Aç değilim.</Tr>
+  </LocalText>
+  <LocalText name="coldCauldron">
+    <En>A cauldron filled with cold water.</En>
+    <Tr>Soğuk su dolu bir kazan.</Tr>
+  </LocalText>
+  <LocalText name="boilingWater">
+    <En>I think I see a key in the bottom but water is boiling and I cannot take it.</En>
+    <Tr>Sanırım dibinde bir anahtar görüyorum fakat su kaynadığı için onu alamıyorum.</Tr>
+  </LocalText>
+  <LocalText name="keyFromBoilingWater">
+    <En>I got a silver key from boiling water with wooden spoon.</En>
+    <Tr>Tahta kaşık ile kaynar sudan anahtarı almayı başardım.</Tr>
+  </LocalText>
+  <LocalText name="cauldronHot">
+    <En>A cauldron filled with boiling water.</En>
+    <Tr>Kaynar su dolu bir kazan.</Tr>
+  </LocalText>
+  <LocalText name="strangeChestName">
+    <En>Strange chest</En>
+    <Tr>Grarip sandık</Tr>
+  </LocalText>
+  <LocalText name="strangeChestDescription">
+    <En>A strange chest with a silver lock.</En>
+    <Tr>Gümüş kilitli garip bir sandık</Tr>
+  </LocalText>
+  <LocalText name="strangeChestOpened">
+    <En>It's opened by itself!</En>
+    <Tr>Kendi kendine açıldı!</Tr>
+  </LocalText>
+  <LocalText name="strangeChestLocked">
+    <En>It's locked with a silver lock.</En>
+    <Tr>Gümüş bir kilit ile kilitli.</Tr>
+  </LocalText>
+  <LocalText name="divineComedyName">
+    <En>Divine Comedy</En>
+    <Tr>İlahi Komedya</Tr>
+  </LocalText>
+  <LocalText name="divineComedyDescription">
+    <En>Divine Comedy by Dante. One of my father's favorites.</En>
+    <Tr>İlahi Komedya. Babamın en çok sevdiği kitaplardan.</Tr>
+  </LocalText>
+  <LocalText name="wontRead">
+    <En>No time to read arbitrary books.</En>
+    <Tr>Rastgele kitap okumanın sırası değil.</Tr>
+  </LocalText>
+  <LocalText name="strongDoorName">
+    <En>Strong door</En>
+    <Tr>Sağlam kapı</Tr>
+  </LocalText>
+  <LocalText name="strongDoorDescription">
+    <En>A very strong looking door with a golden keyhole.</En>
+    <Tr>Anahtar deliği altın olan oldukça sağlam bir kapı.</Tr>
+  </LocalText>
+  <LocalText name="strongDoorText">
+    <En>It's opened! Let's see what are you hiding father...</En>
+    <Tr>Açıldı! Bakalım neler saklıyorsun baba...</Tr>
+  </LocalText>
+  <LocalText name="strongDoorLocked">
+    <En>It's locked and too strong to break.</En>
+    <Tr>Kilitli ve kıramayacağım kadar sağlam.</Tr>
+  </LocalText>
+  <LocalText name="goldenKeyName">
+    <En>Golden key</En>
+    <Tr>Altın anahtar</Tr>
+  </LocalText>
+  <LocalText name="goldenKeyDescription">
+    <En>A golden key.</En>
+    <Tr>Altın bir anahtar.</Tr>
+  </LocalText>
+  <LocalText name="goldenKeyText">
+    <En>Let's find what you unlocked...</En>
+    <Tr>Ne açtığını bulalım...</Tr>
+  </LocalText>
+  <LocalText name="outsideDoorName">
+    <En>Outside door</En>
+    <Tr>Dış kapı</Tr>
+  </LocalText>
+  <LocalText name="outsideDoorDescription">
+    <En>Outside door.</En>
+    <Tr>Dış kapı</Tr>
+  </LocalText>
+  <LocalText name="wontGoOut">
+    <En>No way I'm going out there, it's freezing and I must find out what my father was doing here.</En>
+    <Tr>Imkanı yok bu soğukta dışarı çımam! Hem babamın burada ne yaptığını öğrenmem lazım.</Tr>
   </LocalText>
   <LocalText name="credits">
     <En>

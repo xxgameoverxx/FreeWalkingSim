@@ -19,6 +19,26 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
+    public void OnTurkishClicked()
+    {
+        Localizer.Instance().ChangeLanguage("Tr");
+    }
+
+    public void OnEnglishClicked()
+    {
+        Localizer.Instance().ChangeLanguage("En");
+    }
+
+    public void Torreng()
+    {
+        Application.OpenURL("http://torrenglabs.com/");
+    }
+
+    public void EBergi()
+    {
+        Application.OpenURL("http://e-bergi.com/");
+    }
+
     private void Credits()
     {
         string credits = Localizer.Instance().Get("credits", "-", false);
