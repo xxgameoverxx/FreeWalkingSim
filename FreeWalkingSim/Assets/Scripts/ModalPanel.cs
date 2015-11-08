@@ -75,7 +75,11 @@ public class ModalPanel : MonoBehaviour
             messageList[0].Unregister();
 
         if (messageList.Count > 0)
+        {
             Popup(messageList[0]);
+            if (GameManager.Instance().inGame)
+                ObjectHolder.Instance().player.enabled = false;
+        }
         else
             ClosePanel();
     }
@@ -93,10 +97,13 @@ public class ModalPanel : MonoBehaviour
     public void Unregister(PopUpMessage message)
     {
         if (GameManager.Instance().inGame)
+        {
             uiHolder.WriteText(message.afterMessage);
-        if(message.gotTheMessage != null)
+            ObjectHolder.Instance().player.enabled = true;
+        }
+        if (message.gotTheMessage != null)
             message.gotTheMessage.Invoke();
-    
+
         messageList.Remove(message);
     }
 

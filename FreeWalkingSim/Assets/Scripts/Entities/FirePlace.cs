@@ -23,7 +23,9 @@ public class FirePlace : Entity
         {
             Inventory.Remove(neededObjects[0]);
             torch.SetActive(true);
+            GetComponent<AudioSource>().Play();
             activated = true;
+            usable = false;
             return true;
         }
         else

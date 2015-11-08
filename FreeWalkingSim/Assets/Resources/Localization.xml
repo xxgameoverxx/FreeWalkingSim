@@ -11,6 +11,22 @@
     <En>Quit</En>
     <Tr>Çıkış</Tr>
   </LocalText>
+  <LocalText name="menu">
+    <En>Menu</En>
+    <Tr>Menü</Tr>
+  </LocalText>
+  <LocalText name="pause">
+    <En>Pause</En>
+    <Tr>Duraklatıldı</Tr>
+  </LocalText>
+  <LocalText name="blackWhite">
+    <En>Monochrome</En>
+    <Tr>Siyah - Beyaz</Tr>
+  </LocalText>
+  <LocalText name="noise">
+    <En>Noise</En>
+    <Tr>Karıncalanma</Tr>
+  </LocalText>
   <LocalText name="...">
     <En>...</En>
     <Tr>...</Tr>
@@ -291,9 +307,186 @@
     <En>No way I'm going out there, it's freezing and I must find out what my father was doing here.</En>
     <Tr>Imkanı yok bu soğukta dışarı çımam! Hem babamın burada ne yaptığını öğrenmem lazım.</Tr>
   </LocalText>
+  <LocalText name="historyOfTheWorldName">
+    <En>History Of The World</En>
+    <Tr>Dünya'nın Tarihi</Tr>
+  </LocalText>
+  <LocalText name="historyOfTheWorldDescription">
+    <En>One of many tomes of History Of The World</En>
+    <Tr>Dünya'nın Tarihi isimli kitabın birçok cildinden birisi.</Tr>
+  </LocalText>
+  <LocalText name="scienceForAllName">
+    <En>Science For All</En>
+    <Tr>Herkes İçin Bilim</Tr>
+  </LocalText>
+  <LocalText name="scienceForAllDescription">
+    <En>A book called Science For All.</En>
+    <Tr>Herkes İçin Bilim isimli bir kitap.</Tr>
+  </LocalText>
+  <LocalText name="bubeName">
+    <En>Bube</En>
+    <Tr>Bube</Tr>
+  </LocalText>
+  <LocalText name="bubeDescription">
+    <En>A book called Bube... What does that even mean?</En>
+    <Tr>Bube isimli bir kitap... O ne demek ya?</Tr>
+  </LocalText>
+  <LocalText name="foreignBookName">
+    <En>Foreign Book</En>
+    <Tr>Yabancı Kitap</Tr>
+  </LocalText>
+  <LocalText name="foreignBookDescription">
+    <En>A book written in some strange language.</En>
+    <Tr>Garip bir dilde yazılmış kitap.</Tr>
+  </LocalText>
+  <LocalText name="cultResearchName">
+    <En>Cult Research</En>
+    <Tr>Tarikat Araştırması</Tr>
+  </LocalText>
+  <LocalText name="cultResearchDescription">
+    <En>A research on some weird cult.</En>
+    <Tr>Garip bir tarikat ile ilgili araştırma.</Tr>
+  </LocalText>
+  <LocalText name="oldBookShelfName">
+    <En>Old Book Shelf</En>
+    <Tr>Old Book Shelf</Tr>
+  </LocalText>
+  <LocalText name="oldBookShelfDescription">
+    <En>My father loved to read. Even here he has so many books. He read many of these many times. They were his favorites.</En>
+    <Tr>Babam okumayı çok severdi. Burada bile bu kadar çok kitabı var. Bunların çoğunu birçok kez okumuşluğu var. En sevdiği kitaplardı.</Tr>
+  </LocalText>
+  <LocalText name="fathersBooks">
+    <En>There are so many of them. I don't have time to read arbitrary books.</En>
+    <Tr>Çok fazlalar. Rastgele kitap okumak için vaktim yok.</Tr>
+  </LocalText>
+  <LocalText name="aleName">
+    <En>Ale</En>
+    <Tr>İçki</Tr>
+  </LocalText>
+  <LocalText name="aleDescription">
+    <En>Eww! Definitely not a water! Probably it was some kind of wine in some point of its life.</En>
+    <Tr>Öff! Bu kesinlikle su değil! Hayatının bir döneminde bir çeşit şaraptı sanırım.</Tr>
+  </LocalText>
+  <LocalText name="aleText">
+    <En>I'm NOT drinking that!</En>
+    <Tr>Bunu ASLA içmeyeceğim!</Tr>
+  </LocalText>
+  <LocalText name="dirtyTableName">
+    <En>Dirty table</En>
+    <Tr>Pis masa</Tr>
+  </LocalText>
+  <LocalText name="dirtyTableDescription">
+    <En>Ugh... If I would left a dinner table in this condition he would yell at me for an hour.</En>
+    <Tr>Pff... Yemek masasını bu halde bırakmış olsaydım bir saat boyunca bana bağırırdı.</Tr>
+  </LocalText>
+  <LocalText name="dirtyTableText">
+    <En>I'm not cleaning this!</En>
+    <Tr>Bunu temizlemeyeceğim!</Tr>
+  </LocalText>
+  <LocalText name="knifeName">
+    <En>Knife</En>
+    <Tr>Bıçak</Tr>
+  </LocalText>
+  <LocalText name="knifeDescription">
+    <En>A knife stuck in the wall, holding piece of paper.</En>
+    <Tr>Duvara saplanmış, kağıt parçasını tutan bir bıçak.</Tr>
+  </LocalText>
+  <LocalText name="knifeText">
+    <En>It's stuck! I cannot pull it out.</En>
+    <Tr>Sıkışmış! Çıkaramıyorum.</Tr>
+  </LocalText>
+  <LocalText name="bookBoxName">
+    <En>Book box</En>
+    <Tr>Kitap kutusu</Tr>
+  </LocalText>
+  <LocalText name="bookBoxDescription">
+    <En>Even more books...</En>
+    <Tr>Daha çok kitap...</Tr>
+  </LocalText>
+  <LocalText name="newGramaphoneName">
+    <En>New gramaphone</En>
+    <Tr>Yeni gramafon</Tr>
+  </LocalText>
+  <LocalText name="newGramaphoneDescription">
+    <En>This one does not seems so old but I don't think its working.</En>
+    <Tr>Bu o kadar da eski görünmüyor fakat çalıştığını sanmıyorum.</Tr>
+  </LocalText>
+  <LocalText name="newGramaphoneText">
+    <En>Nah, the old one is better.</En>
+    <Tr>Meh, eskisi daha güzel.</Tr>
+  </LocalText>
+  <LocalText name="musicBoxName">
+    <En>Music box</En>
+    <Tr>Müzik kutusu</Tr>
+  </LocalText>
+  <LocalText name="musicBoxDescription">
+    <En>A music box. I had one just like this when I was a kid.</En>
+    <Tr>Bir müzik kutusu. Küçükken aynısından bende de vardı.</Tr>
+  </LocalText>
+  <LocalText name="musicBoxText">
+    <En>Hmm... The balerine is not turning. Must be broken.</En>
+    <Tr>Hmm... Balerin dönmüyor. Bozulmuş olmalı.</Tr>
+  </LocalText>
+  <LocalText name="fileCabinetName">
+    <En>File cabinet</En>
+    <Tr>Dosya dolabı</Tr>
+  </LocalText>
+  <LocalText name="fileCabinetDescription">
+    <En>An old file cabinet.</En>
+    <Tr>Eski bir dosya dolabı.</Tr>
+  </LocalText>
+  <LocalText name="fileCabinetText">
+    <En>It's stuck, I cannot open it.</En>
+    <Tr>Sıkışmış, açamıyorum.</Tr>
+  </LocalText>
+  <LocalText name="gardeningName">
+    <En>Gardening</En>
+    <Tr>Bahçivanlık</Tr>
+  </LocalText>
+  <LocalText name="gardeningDescription">
+    <En>Gardenin. Huh, I didn't know my father was into gardening.</En>
+    <Tr>Bahçivanlık. Hmm, babamın bahçivanlık ile ilgilendiğini bilmiyordum.</Tr>
+  </LocalText>
+  <LocalText name="oldBookName">
+    <En>Old book</En>
+    <Tr>Garip kitap</Tr>
+  </LocalText>
+  <LocalText name="oldBookDescription">
+    <En>A weird old book.</En>
+    <Tr>Eski, garip bir kitap.</Tr>
+  </LocalText>
+  <LocalText name="deansElectronicsName">
+    <En>Dean's Electronics</En>
+    <Tr>Dean'in Elektronik Kitabı</Tr>
+  </LocalText>
+  <LocalText name="deansElectronicsDescription">
+    <En>Dean's Electronics, blue edition. I could learn a lot of skills had I time to read it.</En>
+    <Tr>Dean'in Elektronik Kitabı, mavi baskı. Zamanım olsaydı bu kitaptan birçok şey öğrenebilirdim.</Tr>
+  </LocalText>
+  <LocalText name="ebergiName">
+    <En>E-Bergi</En>
+    <Tr>E-Bergi</Tr>
+  </LocalText>
+  <LocalText name="ebergiDescription">
+    <En>E-Bergi. Hmm...</En>
+    <Tr>E-Bergi. Hmm...</Tr>
+  </LocalText>
+  <LocalText name="poeName">
+    <En>Edgar Allan Poe Anthology</En>
+    <Tr>Edgar Allan Poe Toplu Eserleri</Tr>
+  </LocalText>
+  <LocalText name="poeDescription">
+    <En>Anthology of Edgar Allan Poe. Father used to read this book to me at bed - time.</En>
+    <Tr>Edgar Allan Poe Toplu Eserleri. Küçükken babam yatmadan, masal niyetine bu kitabı okurdu.</Tr>
+  </LocalText>
+  <LocalText name="poeText">
+    <En>I would love to but I really don't have time.</En>
+    <Tr>Çok isterdim fakat gerçekten zamanım yok.</Tr>
+  </LocalText>
   <LocalText name="credits">
     <En>
       This game was developed by Anton Semchenko
+      and story was written by Doruk Yurtsever
       for e-bergi.com with purpose of writing
       a guide about creating games with free assets.
       As such, most of visual and sound assets were downloaded
@@ -303,7 +496,8 @@
     <Tr>
       Bu oyun Anton Semchenko tarafından
       e-bergi.com için bedavaya oyun geliştirme
-      rehberi yazmak amacı ile geliştirilmiştir. Bu
+      rehberi yazmak amacı ile geliştirilmiş hikayesi
+      Doruk Yurtsever tarafından yazılmıştır. Bu
       nedenle oyundaki görsellerin ve seslerin tamamına
       yakın bir kısmı internetten indirilmiştir. Bu ses
       ve görüntülerin tamamı ticari ürünlerde hiçbir
@@ -355,14 +549,9 @@
       www.assetstore.unity3d.com/en/#!/content/38304
       Animated Spell Book
       www.assetstore.unity3d.com/en/#!/content/23742
-      Notebook
-      opengameart.org/content/notebook-eaten-by-mice
-      Icons made by Freepik from www.flaticon.com
-      Font
-      www.kimberlygeswein.com/
+      Handpainted Keys
+      www.assetstore.unity3d.com/en/#!/content/42044
 
-      Wind Machine (Ambient Sound)
-      www.looperman.com/loops/detail/30119/wind-machine-by-planetjazzbass-free-120bpm-classical-percussion-loop
     </En>
     <Tr>
       Animated Old Chest
@@ -373,6 +562,12 @@
       www.assetstore.unity3d.com/en/#!/content/38304
       Animated Spell Book
       www.assetstore.unity3d.com/en/#!/content/23742
+      Handpainted Keys
+      www.assetstore.unity3d.com/en/#!/content/42044
+    </Tr>
+  </LocalText>
+  <LocalText name="usedAssets3">
+    <En>
       Notebook
       opengameart.org/content/notebook-eaten-by-mice
       Icons made by Freepik from www.flaticon.com
@@ -381,6 +576,20 @@
 
       Wind Machine (Ambient Sound)
       www.looperman.com/loops/detail/30119/wind-machine-by-planetjazzbass-free-120bpm-classical-percussion-loop
+      SFX
+      http://www.freesfx.co.uk
+    </En>
+    <Tr>
+      Notebook
+      opengameart.org/content/notebook-eaten-by-mice
+      Icons made by Freepik from www.flaticon.com
+      Font
+      www.kimberlygeswein.com/
+
+      Wind Machine (Ambient Sound)
+      www.looperman.com/loops/detail/30119/wind-machine-by-planetjazzbass-free-120bpm-classical-percussion-loop
+      SFX
+      http://www.freesfx.co.uk
     </Tr>
   </LocalText>
   <LocalText name="thanks">

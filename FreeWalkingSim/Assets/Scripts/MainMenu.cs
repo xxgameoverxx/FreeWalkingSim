@@ -44,6 +44,7 @@ public class MainMenu : MonoBehaviour
         string credits = Localizer.Instance().Get("credits", "-", false);
         string usedAssets = Localizer.Instance().Get("usedAssets", "-", false);
         string usedAssets2 = Localizer.Instance().Get("usedAssets2", "-", false);
+        string usedAssets3 = Localizer.Instance().Get("usedAssets3", "-", false);
         string thanks = Localizer.Instance().Get("thanks", "-", false);
         string developer = Localizer.Instance().Get("anton", "-", false);
         
@@ -54,6 +55,8 @@ public class MainMenu : MonoBehaviour
             usedAssets = "lol";
         if (usedAssets2 == "ERROR")
             usedAssets2 = "lol";
+        if (usedAssets3 == "ERROR")
+            usedAssets3 = "lol";
         if (thanks == "ERROR")
             thanks = "lol";
         if (developer == "ERROR")
@@ -65,6 +68,8 @@ public class MainMenu : MonoBehaviour
         ModalPanel.Instance().Register(new PopUpMessage(usedAssets));
         usedAssets2 = RemoveWhitespace(usedAssets2);
         ModalPanel.Instance().Register(new PopUpMessage(usedAssets2));
+        usedAssets3 = RemoveWhitespace(usedAssets3);
+        ModalPanel.Instance().Register(new PopUpMessage(usedAssets3));
         thanks = RemoveWhitespace(thanks);
         ModalPanel.Instance().Register(new PopUpMessage(thanks));
         developer = RemoveWhitespace(developer);

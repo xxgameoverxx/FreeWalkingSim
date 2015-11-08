@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class ObjectHolder : MonoBehaviour
 {
@@ -24,21 +26,35 @@ public class ObjectHolder : MonoBehaviour
     }
     #endregion
 
-
     public GameObject tutorialPanel;
     public GameObject papers;
     public GameObject matches;
     public GameObject inventoryImage;
     public GameObject inventoryPanel;
+    public GameObject pauseMenu;
+    public FirstPersonController player;
+    public Toggle blackWhiteToggle;
+    public Toggle noiseToggle;
     public GameManager manager;
 
-    void Awake()
+    void Start()
     {
-        inventoryPanel = GameObject.FindGameObjectWithTag("InventoryPanel");
-        tutorialPanel = GameObject.FindGameObjectWithTag("TutorialPanel");
 
         papers = Resources.Load<GameObject>("Prefabs/UnimportantPaper");
         inventoryImage = Resources.Load<GameObject>("Prefabs/UI/Base");
         manager = GameManager.Instance();
+
+        inventoryPanel = GameObject.FindGameObjectWithTag("InventoryPanel");
+        tutorialPanel = GameObject.FindGameObjectWithTag("TutorialPanel");
+        pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
+        player = GameObject.FindObjectOfType<FirstPersonController>();
+
+        if (manager.inGame)
+        {
+            blackWhiteToggle = GameObject.FindGameObjectWithTag("BlackWhiteToggle").GetComponent<Toggle>();
+            noiseToggle = GameObject.FindGameObjectWithTag("NoiseToggle").GetComponent<Toggle>();
+            noiseToggle.onValueChanged.AddListener((val) => manager.OnNoiseToggled(val));
+            blackWhiteToggle.onValueChanged.AddListener((val) => manager.OnBlackAndWhiteToggled(val));
+        }
     }
 }

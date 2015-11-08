@@ -27,12 +27,16 @@ public class Entity : MonoBehaviour
     public GameObject objectToSpawn;
     public Entity objectToGet;
     public Sprite inventoryImage;
+    protected AudioSource useSound;
+    public float delaySound = 0;
     public int quantity = 1;
+    public Color shineColor = new Color(0.1f, 0.1f, 0.1f);
 
 
     public void Start()
     {
         player = GameObject.FindObjectOfType<FirstPersonController>();
+        useSound = GetComponent<AudioSource>();
         uiHolder = UIHolder.Instance();
         if (GetComponent<Renderer>() != null)
             mat = GetComponent<Renderer>().material;
@@ -43,7 +47,7 @@ public class Entity : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, player.transform.position) < distanceToSee && mat != null)
         {
-            mat.SetColor("_EmissionColor", new Color(0.1f, 0.1f, 0.1f));
+            mat.SetColor("_EmissionColor", shineColor);
         }
 
         if (Vector3.Distance(player.transform.position, transform.position) < distanceToClick)
@@ -122,6 +126,8 @@ public class Entity : MonoBehaviour
         }
         else
             uiHolder.WriteText(localizer.Get(usedText));
+        if (useSound != null && useSound.clip != null)
+            useSound.PlayDelayed(delaySound);
         return true;
     }
 }

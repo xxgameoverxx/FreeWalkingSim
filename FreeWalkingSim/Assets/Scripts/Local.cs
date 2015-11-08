@@ -10,7 +10,7 @@ public class Local : MonoBehaviour
     Text txt;
     Localizer localizer;
 
-    void Start()
+    void Awake()
     {
         localizer = Localizer.Instance();
         txt = GetComponent<Text>();

@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityStandardAssets.ImageEffects;
 
 public class GameManager : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour
 
     private float tutCountDown = 10;
     public bool inGame = false;
+    public bool paused = false;
 
     public List<Entity> objectsToAddAtStart = new List<Entity>();
     private ModalPanel modalPanel;
@@ -56,6 +58,7 @@ public class GameManager : MonoBehaviour
     public void Init()
     {
         inGame = true;
+        CenterMouse.Instance();
         modalPanel = ModalPanel.Instance();
         objectHolder = ObjectHolder.Instance();
 
@@ -68,6 +71,8 @@ public class GameManager : MonoBehaviour
         }
 
         modalPanel.Register(new PopUpMessage("storySoFar", "storySoFarComment", showTutorialAction));
+
+        OnPauseMenu();
     }
 
     public void ShowTutorial()
@@ -81,6 +86,47 @@ public class GameManager : MonoBehaviour
         goldenKey.SetActive(true);
     }
 
+    public void OnPauseMenu()
+    {
+        if (paused)
+            Time.timeScale = 0;
+        else
+            Time.timeScale = 1;
+        objectHolder.pauseMenu.SetActive(paused);
+        objectHolder.player.enabled = !paused;
+        CenterMouse.Instance().UpdateCursor();
+    }
+
+    public void OnNoiseToggled(bool val)
+    {
+        Camera.main.GetComponent<NoiseAndScratches>().enabled = val;
+    }
+
+    public void OnBlackAndWhiteToggled(bool val)
+    {
+        Camera.main.GetComponent<Grayscale>().enabled = val;
+    }
+
+    public void OnTurkishClicked()
+    {
+        Localizer.Instance().ChangeLanguage("Tr");
+    }
+
+    public void OnEnglishClicked()
+    {
+        Localizer.Instance().ChangeLanguage("En");
+    }
+
+    public void OnMenuClicked()
+    {
+        Application.LoadLevel("MainMenu");
+    }
+
+    public void OnQuitClicked()
+    {
+        Application.Quit();
+    }
+
     void Update()
     {
         if (inGame && objectHolder.tutorialPanel.activeSelf)
@@ -92,7 +138,8 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Application.LoadLevel("MainMenu");
+            paused = !paused;
+            OnPauseMenu();
         }
     }
 
