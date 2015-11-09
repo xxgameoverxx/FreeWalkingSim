@@ -31,6 +31,10 @@
     <En>Noise</En>
     <Tr>Karıncalanma</Tr>
   </LocalText>
+  <LocalText name="mouseSensitivity">
+    <En>Mouse Sensitivity</En>
+    <Tr>Fare Hassaslığı</Tr>
+  </LocalText>
   <LocalText name="...">
     <En>...</En>
     <Tr>...</Tr>

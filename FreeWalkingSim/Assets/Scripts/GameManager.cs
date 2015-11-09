@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
             Inventory.Add(e);
         }
 
-        modalPanel.Register(new PopUpMessage("storySoFar", "storySoFarComment", showTutorialAction));
+        modalPanel.Register(new PopUpMessage(Localizer.Instance().Get("storySoFar"), Localizer.Instance().Get("storySoFarComment"), showTutorialAction));
 
         OnPauseMenu();
     }
@@ -104,6 +104,10 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
         else
             Time.timeScale = 1;
+
+        if (objectHolder.tutorialPanel.activeSelf)
+            objectHolder.tutorialPanel.SetActive(false);
+
         objectHolder.pauseMenu.SetActive(paused);
         objectHolder.player.enabled = !paused;
         CenterMouse.Instance().UpdateCursor();

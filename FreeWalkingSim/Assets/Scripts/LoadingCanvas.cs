@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LoadingCanvas : MonoBehaviour {
+public class LoadingCanvas : MonoBehaviour
+{
 
-	void OnLevelLoaded()
+    void OnLevelLoaded()
     {
         Destroy(this.gameObject);
     }
