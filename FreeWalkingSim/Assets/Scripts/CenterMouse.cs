@@ -22,6 +22,7 @@ public class CenterMouse : MonoBehaviour
         return centerMouse;
     }
     #endregion
+
     public void Start()
     {
         UpdateCursor();
@@ -34,6 +35,7 @@ public class CenterMouse : MonoBehaviour
 
     public void UpdateCursor()
     {
+        Cursor.SetCursor(Resources.Load<Texture2D>("Sprites/amouse"), Vector2.zero, CursorMode.Auto);
         if (Application.loadedLevelName == "GameScene" && !GameManager.Instance().paused)
         {
             Cursor.lockState = CursorLockMode.Locked;
