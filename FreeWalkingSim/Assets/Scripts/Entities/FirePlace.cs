@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class FirePlace : Entity
 {
 
     GameObject torch;
+    bool firstTime = true;
 
     public void Start()
     {
@@ -16,6 +18,11 @@ public class FirePlace : Entity
 
     public override bool Use()
     {
+        if (firstTime)
+        {
+            firstTime = false;
+            GameManager.Instance().FirePlaceUsed();
+        }
         if (base.Use())
         {
             Inventory.Remove(neededObjects[0]);

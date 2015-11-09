@@ -82,10 +82,20 @@ public class GameManager : MonoBehaviour
         objectHolder.tutorialPanel.SetActive(true);
     }
 
+    public void FirePlaceUsed()
+    {
+        GameObject.FindObjectOfType<PaperBox>().usable = true;
+    }
+
     public void SpellBookUsed()
     {
         UIHolder.Instance().WriteText(Localizer.Instance().Get("keySpawn"));
         goldenKey.SetActive(true);
+        foreach (Gramaphone g in FindObjectsOfType<Gramaphone>())
+        {
+            if (g.Name == "musicBoxName")
+                g.activated = true;
+        }
     }
 
     public void GoldenDoorOpened()
@@ -115,12 +125,18 @@ public class GameManager : MonoBehaviour
 
     public void OnNoiseToggled(bool val)
     {
-        Camera.main.GetComponent<NoiseAndScratches>().enabled = val;
+        foreach (Camera c in FindObjectsOfType<Camera>())
+        {
+            c.GetComponent<NoiseAndScratches>().enabled = val;
+        }
     }
 
     public void OnBlackAndWhiteToggled(bool val)
     {
-        Camera.main.GetComponent<Grayscale>().enabled = val;
+        foreach (Camera c in FindObjectsOfType<Camera>())
+        {
+            c.GetComponent<Grayscale>().enabled = val;
+        }
     }
 
     public void OnTurkishClicked()

@@ -10,6 +10,7 @@ public class PaperBox : Entity
         description = "paperBoxDescription";
         usedText = "paperTaken";
         objectToGet = ObjectHolder.Instance().papers.GetComponent<Entity>();
+        usable = false;
     }
 
     public override bool Use()
