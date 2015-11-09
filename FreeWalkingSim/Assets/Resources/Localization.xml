@@ -15,6 +15,10 @@
     <En>Menu</En>
     <Tr>Menü</Tr>
   </LocalText>
+  <LocalText name="loading">
+    <En>Loading...</En>
+    <Tr>Yükleniyor...</Tr>
+  </LocalText>
   <LocalText name="pause">
     <En>Pause</En>
     <Tr>Duraklatıldı</Tr>

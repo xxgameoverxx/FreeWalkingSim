@@ -9,9 +9,6 @@ public class FirePlace : Entity
     public void Start()
     {
         base.Start();
-        Name = "fireplaceName";
-        description = "fireplaceDescription";
-        cannotUseText = "needPaper";
         neededObjects.Add(ObjectHolder.Instance().papers.GetComponent<Entity>());
         torch = transform.parent.FindChild("Torch").gameObject;
         torch.SetActive(activated);
@@ -28,10 +25,11 @@ public class FirePlace : Entity
             usable = false;
             return true;
         }
-        else
+        else if(!activated)
         {
             uiHolder.WriteText(localizer.Get(cannotUseText));
             return false;
         }
+        return true;
     }
 }

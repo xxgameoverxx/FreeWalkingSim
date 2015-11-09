@@ -6,6 +6,7 @@ public class MainMenu : MonoBehaviour
 {
     public void OnNewGameClicked()
     {
+        Instantiate(Resources.Load<GameObject>("Prefabs/UI/LoadingCanvas"));
         Application.LoadLevel("GameScene");
     }
 

@@ -131,6 +131,7 @@ public class GameManager : MonoBehaviour
 
     public void OnMenuClicked()
     {
+        Instantiate(objectHolder.loadingScreen);
         Application.LoadLevel("MainMenu");
     }
 

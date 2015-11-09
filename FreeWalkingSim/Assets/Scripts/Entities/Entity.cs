@@ -28,6 +28,7 @@ public class Entity : MonoBehaviour
     public Entity objectToGet;
     public Sprite inventoryImage;
     protected AudioSource useSound;
+    public AudioClip playOnce;
     public float delaySound = 0;
     public int quantity = 1;
     public Color shineColor = new Color(0.1f, 0.1f, 0.1f);
@@ -126,8 +127,13 @@ public class Entity : MonoBehaviour
         }
         else
             uiHolder.WriteText(localizer.Get(usedText));
-        if (useSound != null && useSound.clip != null)
-            useSound.PlayDelayed(delaySound);
+        if (useSound != null)
+        {
+            if (playOnce != null)
+                useSound.PlayOneShot(playOnce);
+            if (useSound.clip != null)
+                useSound.PlayDelayed(delaySound);
+        }
         return true;
     }
 }

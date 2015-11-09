@@ -32,6 +32,7 @@ public class ObjectHolder : MonoBehaviour
     public GameObject inventoryImage;
     public GameObject inventoryPanel;
     public GameObject pauseMenu;
+    public GameObject loadingScreen;
     public FirstPersonController player;
     public Toggle blackWhiteToggle;
     public Toggle noiseToggle;
@@ -42,6 +43,7 @@ public class ObjectHolder : MonoBehaviour
 
         papers = Resources.Load<GameObject>("Prefabs/UnimportantPaper");
         inventoryImage = Resources.Load<GameObject>("Prefabs/UI/Base");
+        loadingScreen = Resources.Load<GameObject>("Prefabs/UI/LoadingCanvas");
         manager = GameManager.Instance();
 
         inventoryPanel = GameObject.FindGameObjectWithTag("InventoryPanel");
