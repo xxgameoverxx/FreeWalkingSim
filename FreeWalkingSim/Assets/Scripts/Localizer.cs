@@ -26,7 +26,7 @@ public class Localizer : MonoBehaviour
     }
     #endregion
 
-    public string currentLanguage = "Tr";
+    public string currentLanguage = "En";
     static Dictionary<string, LocalText> localTextDict = new Dictionary<string, LocalText>();
 
     public Action langaugeChangedAction;

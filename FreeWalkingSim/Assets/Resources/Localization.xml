@@ -1,4 +1,8 @@
-<Root>
+﻿<Root>
+  <LocalText name="title">
+    <En>Ophite: The Eighth Archon</En>
+    <Tr>Ophite: Sekizinci Melek</Tr>
+  </LocalText>
   <LocalText name="newGame">
     <En>New Game</En>
     <Tr>Yeni Oyun</Tr>
@@ -71,9 +75,13 @@
     <En>A fireplace</En>
     <Tr>Bir şömine</Tr>
   </LocalText>
+  <LocalText name="fireplaceText">
+    <En>That's better. I can feel my fingers again!</En>
+    <Tr>Şimdi oldu. Parmaklarımı yeniden hissedebiliyorum!</Tr>
+  </LocalText>
   <LocalText name="needPaper">
     <En>I need some paper to light this.</En>
-    <Tr>Tutuşturmak için kağıda ihtiyacım var.</Tr>
+    <Tr>Tutuşturmak için biraz kağıda ihtiyacım var.</Tr>
   </LocalText>
   <LocalText name="paperBoxName">
     <En>Paper box</En>
@@ -84,8 +92,8 @@
     <Tr>Gereksiz kağıtlarla dolu bir kutu.</Tr>
   </LocalText>
   <LocalText name="paperTaken">
-    <En>I took few papers.</En>
-    <Tr>Birkaç kağıt aldım.</Tr>
+    <En>I took some papers.</En>
+    <Tr>Birkaç parça kağıt aldım.</Tr>
   </LocalText>
   <LocalText name="papers">
     <En>Paper</En>
@@ -120,12 +128,23 @@
     <Tr>Kullan</Tr>
   </LocalText>
   <LocalText name="storySoFar">
-    <En>A very tragic story :(</En>
-    <Tr>Çok trajik bir hikaye :(</Tr>
+    <En>My lovely daughter,
+	I hope you never get this letter. If you have, know that it is too late for me.
+	There is nothing that you can do to change the course of events, but, you have to know what is to come and when it comes.
+	Go to our house in the mountain, all answers will be there.
+	
+	With love and regret,
+	B. Valentinus</En>
+    <Tr>Sevgili kızım,
+	Umarım bu mektubu asla almazsın. Eğer alırsan, bil ki benim için artık çok geçtir. Olayların gidişatını değiştirmek için yapabileceğin hiç bir şey yok. Yine de ne olacağını ve ne zaman olacağını bilmelisin.
+	Dağdaki evimize git, tüm cevapları orada bulacaksın.
+	
+	Böyle olması gerektiği için üzgünüm,
+	B. Valentinus</Tr>
   </LocalText>
   <LocalText name="storySoFarComment">
-    <En>Nah, it isn't so tragic.</En>
-    <Tr>Yok la o kadar da değilmiş.</Tr>
+    <En>Dad... What have you done?</En>
+    <Tr>Baba... Aklından ne geçiyordu?</Tr>
   </LocalText>
   <LocalText name="chestName">
     <En>Chest</En>
@@ -152,7 +171,7 @@
     <Tr>Ekzantik bir lamba</Tr>
   </LocalText>
   <LocalText name="lampTried">
-    <En>No ginnie... Well, at least I tried.</En>
+    <En>No ginnie... Well, at least I've tried.</En>
     <Tr>Cin yok... En azından denedim.</Tr>
   </LocalText>
   <LocalText name="cauldronName">
@@ -172,32 +191,44 @@
     <Tr>Babamın günlüğü</Tr>
   </LocalText>
   <LocalText name="fathersJournalText">
-    <En>Huh. He read alot of books and loved many of them. May be there is a clue somewhere...</En>
-    <Tr>Hmm. Babam sürekli kitap okurdu ve sevdiği birçok kitap vardı. Belki buralarda bir ipucu bulurum...</Tr>
+    <En>What were you searching for dad?</En>
+    <Tr>Baba, neyin peşindeydin?</Tr>
   </LocalText>
   <LocalText name="fathersJournalPopUp">
-    <En>Some story. Clue: My favorite book is the key.</En>
-    <Tr>Biraz hikaye. İpucu: anahtar en sevdiğim kitap.</Tr>
+    <En>		Ianuarius,CLX
+	Those restless spirits which, when roused by ambition, are usually inflamed with the desire of revenge.
+	I have failed to enlighten the truth, yet it still lies out in the open.
+	Know that it shall be held as given by the god, for it is the name of the father which will penetrate the veil of ignorance that has seperated all created beings from the true creator.</En>
+    <Tr>		Ianuarius,CLX
+	Hırs ile münakaşaya tutuşan rahatsız ruhlar, intikam ateşinde kavrulmaya mahkumdur.
+	Gerçeği ortaya çıkarmak için verdiğim mücadelede başarısız oldum. Hala ortalıkta keşfedilmeyi bekliyor.
+	Mutlak gerçek, tanrı tarafından verildiği şekilde benimsenmelidir. Çünkü, ancak o vakit adı sayıklandığında, insanlık ile tek tanrı arasındaki cehalet duvarı ortadan kalkacaktır.</Tr>
   </LocalText>
   <LocalText name="encryptedJournalName">
     <En>Encrypted journal</En>
     <Tr>Şifreli günlük</Tr>
   </LocalText>
   <LocalText name="encryptedJournalDescription">
-    <En>An encrypted journal written by my father. He used to write similar messages which would give me a clue about some gift, when i was a little. I need some specific book to read this.</En>
-    <Tr>Babam tarafından yazılmış şifreli bir günlük. Ben küçükken hediyeleri sakladığı yerleri gösterecek ipuçlarını bu şekilde yazardı. Çözmek için spesifik bir kitaba ihtiyacım var.</Tr>
+    <En>Another journal.</En>
+    <Tr>Başka bir günlük.</Tr>
   </LocalText>
   <LocalText name="encryptedJournalText">
-    <En>Really, father. Am I need to learn cook NOW?!</En>
-    <Tr>Gerçekten mi baba? Tam olarak şu anda yemek pişirmeyi mi öğrenmemi istiyorsun?!</Tr>
+    <En>Fire, water... What do you mean...</En>
+    <Tr>Ateş, su... Ne demek istiyorsun...</Tr>
   </LocalText>
   <LocalText name="encryptedJournalPopUp">
-    <En>Some other scarry story. Clue: key is in the cauldron.</En>
-    <Tr>Bir korkunçlu hikaye daha. İpucu: anahtar kazanın içinde.</Tr>
+    <En>Being afraid of the knowledge within, the Book of Thoth was thrown into the depths of the river Nile.
+	It had the power to let one speak to the gods by name.
+	The serpents had guarded what was rejected by humans, until the fire cleansed the water to Aaru.
+	For this day, the truth still lies in the depths of the water. Waiting to be known, yet long forgotten.</En>
+    <Tr>İçinde barındırdığı gerçeklerden korkanlar, Mısır tanrısı Thoth'un Kitabı'nı Nil nehrinin derinliklerine sakladı.
+	Rivayete göre, bu kitap tanrılarla konuşmanın sırlarından bahsediyordu.
+	İnsanlar tarafından reddedilen bu hediyeyi yıllarca yılanlar korudu; ta ki ateş, nehrin sularını arındırana kadar.
+	Bugün, gerçekler hala Nil nehrinin derinliklerinde yatmaktadır, bulunmayı beklerken unutulmuş bir şekilde.</Tr>
   </LocalText>
   <LocalText name="encrypted">
-    <En>This journal is encrypted. I need a specific book to decrypt it.</En>
-    <Tr>Bu günlük şifreli. Şifreyi çözmek için spesifik bir kitaba ihtiyacım var.</Tr>
+    <En>Not a single word is written in it and yet it looks used. He used to write invisible messages to me and leave instruction on how to read them in various books to encourage me to read. I need a spesific book to read this journal.</En>
+    <Tr>Tek bir kelime bile yazılmamış ama kullanılmış görünüyor. Küçükken kitap okutmak amacı ile bana görünmez veya şifreli mesajlar yazar ve okuyabilmem için ipuçlarını çeşitli kitaplarda saklardı. Bunu çözebilmem için spesifik bir kitaba ihtiyacım var.</Tr>
   </LocalText>
   <LocalText name="verseName">
     <En>Verse</En>
@@ -208,8 +239,8 @@
     <Tr>Bir dize.</Tr>
   </LocalText>
   <LocalText name="verseText">
-    <En>Dante's Divine Comedy! This must the book I need to decrypt the journal!</En>
-    <Tr>Dante'nin İlahi Komedya'sı! Şifreyi çözmek için ihtiyacım olan kitap bu olmalı!</Tr>
+    <En>It is a verse from Dante's Divine Comedy. Could it be the key?</En>
+    <Tr>Dante'nin İlahi Komedya'sından bir dize. Anahtar o kitap olabilir mi?</Tr>
   </LocalText>
   <LocalText name="verse">
     <En>Abandon hope all ye who enter here.</En>
@@ -220,27 +251,27 @@
     <Tr>Kaşık</Tr>
   </LocalText>
   <LocalText name="spoonDescription">
-    <En>A big wooden spoon</En>
-    <Tr>Büyük tahta bir kaşık</Tr>
+    <En>A big, wooden spoon</En>
+    <Tr>Büyük, tahta bir kaşık</Tr>
   </LocalText>
   <LocalText name="spoonText">
-    <En>I got the wooden spoon.</En>
+    <En>I've picked up the wooden spoon.</En>
     <Tr>Tahta kaşığı aldım.</Tr>
   </LocalText>
   <LocalText name="dontNeedSpoon">
-    <En>I'm not hungry.</En>
+    <En>I'm not hungry, nor this is food.</En>
     <Tr>Aç değilim.</Tr>
   </LocalText>
   <LocalText name="coldCauldron">
     <En>A cauldron filled with cold water.</En>
-    <Tr>Soğuk su dolu bir kazan.</Tr>
+    <Tr>Soğuk, pis su dolu bir kazan.</Tr>
   </LocalText>
   <LocalText name="boilingWater">
-    <En>I think I see a key in the bottom but water is boiling and I cannot take it.</En>
-    <Tr>Sanırım dibinde bir anahtar görüyorum fakat su kaynadığı için onu alamıyorum.</Tr>
+    <En>I think I see a key in the bottom. Water is boiling, I can not take it.</En>
+    <Tr>Sanırım dibinde bir anahtar görüyorum. Su kaynadığı için onu alamam.</Tr>
   </LocalText>
   <LocalText name="keyFromBoilingWater">
-    <En>I got a silver key from boiling water with wooden spoon.</En>
+    <En>I've got the silver key from boiling water using the wooden spoon.</En>
     <Tr>Tahta kaşık ile kaynar sudan anahtarı almayı başardım.</Tr>
   </LocalText>
   <LocalText name="cauldronHot">
@@ -249,10 +280,10 @@
   </LocalText>
   <LocalText name="strangeChestName">
     <En>Strange chest</En>
-    <Tr>Grarip sandık</Tr>
+    <Tr>Garip sandık</Tr>
   </LocalText>
   <LocalText name="strangeChestDescription">
-    <En>A strange chest with a silver lock.</En>
+    <En>A strange chest with a silver lock attached to it.</En>
     <Tr>Gümüş kilitli garip bir sandık</Tr>
   </LocalText>
   <LocalText name="strangeChestOpened">
@@ -269,7 +300,11 @@
   </LocalText>
   <LocalText name="divineComedyDescription">
     <En>Divine Comedy by Dante. One of my father's favorites.</En>
-    <Tr>İlahi Komedya. Babamın en çok sevdiği kitaplardan.</Tr>
+    <Tr>İlahi Komedya. Babamın en sevdiği kitaplardan.</Tr>
+  </LocalText>
+  <LocalText name="divineComedyText">
+    <En>There is a marked page. Words “fire” and “reveal” are circled. Is it really that simple?</En>
+    <Tr>İşaretli bir sayfa var. "Ateş" ve "Belirmek" kelimeleri daire içine alınmış. Gerçekten bu kadar basit mi?</Tr>
   </LocalText>
   <LocalText name="wontRead">
     <En>No time to read arbitrary books.</En>
@@ -284,11 +319,11 @@
     <Tr>Anahtar deliği altın olan oldukça sağlam bir kapı.</Tr>
   </LocalText>
   <LocalText name="strongDoorText">
-    <En>It's opened! Let's see what are you hiding father...</En>
+    <En>It's opened! Let's see what you are hiding father...</En>
     <Tr>Açıldı! Bakalım neler saklıyorsun baba...</Tr>
   </LocalText>
   <LocalText name="strongDoorLocked">
-    <En>It's locked and too strong to break.</En>
+    <En>It's locked and impossible to break.</En>
     <Tr>Kilitli ve kıramayacağım kadar sağlam.</Tr>
   </LocalText>
   <LocalText name="goldenKeyName">
@@ -296,11 +331,11 @@
     <Tr>Altın anahtar</Tr>
   </LocalText>
   <LocalText name="goldenKeyDescription">
-    <En>A golden key.</En>
-    <Tr>Altın bir anahtar.</Tr>
+    <En>A golden key. It wasn't here before...</En>
+    <Tr>Altın bir anahtar. Önceden burada değildi...</Tr>
   </LocalText>
   <LocalText name="goldenKeyText">
-    <En>Let's find what you unlocked...</En>
+    <En>Let's find what you unlock...</En>
     <Tr>Ne açtığını bulalım...</Tr>
   </LocalText>
   <LocalText name="outsideDoorName">
@@ -313,15 +348,15 @@
   </LocalText>
   <LocalText name="wontGoOut">
     <En>No way I'm going out there, it's freezing and I must find out what my father was doing here.</En>
-    <Tr>Imkanı yok bu soğukta dışarı çımam! Hem babamın burada ne yaptığını öğrenmem lazım.</Tr>
+    <Tr>Imkanı yok bu soğukta dışarı çıkmam! Hem babamın burada ne yaptığını öğrenmem lazım.</Tr>
   </LocalText>
   <LocalText name="historyOfTheWorldName">
     <En>History Of The World</En>
-    <Tr>Dünya'nın Tarihi</Tr>
+    <Tr>Dünya Tarihi</Tr>
   </LocalText>
   <LocalText name="historyOfTheWorldDescription">
-    <En>One of many tomes of History Of The World</En>
-    <Tr>Dünya'nın Tarihi isimli kitabın birçok cildinden birisi.</Tr>
+    <En>One of many tomes of History Of The World series.</En>
+    <Tr>Dünya Tarihi isimli kitabın birçok cildinden biri.</Tr>
   </LocalText>
   <LocalText name="scienceForAllName">
     <En>Science For All</En>
@@ -336,8 +371,8 @@
     <Tr>Bube</Tr>
   </LocalText>
   <LocalText name="bubeDescription">
-    <En>A book called Bube... What does that even mean?</En>
-    <Tr>Bube isimli bir kitap... O ne demek ya?</Tr>
+    <En>Bible</En>
+    <Tr>Kitab-ı Mukaddes</Tr>
   </LocalText>
   <LocalText name="foreignBookName">
     <En>Foreign Book</En>
@@ -352,7 +387,7 @@
     <Tr>Tarikat Araştırması</Tr>
   </LocalText>
   <LocalText name="cultResearchDescription">
-    <En>A research on some weird cult.</En>
+    <En>A research on some cult.</En>
     <Tr>Garip bir tarikat ile ilgili araştırma.</Tr>
   </LocalText>
   <LocalText name="oldBookShelfName">
@@ -360,11 +395,11 @@
     <Tr>Old Book Shelf</Tr>
   </LocalText>
   <LocalText name="oldBookShelfDescription">
-    <En>My father loved to read. Even here he has so many books. He read many of these many times. They were his favorites.</En>
+    <En>My father loved to read. Even here, he has so many books. He's read many of these many times. These were his favorites.</En>
     <Tr>Babam okumayı çok severdi. Burada bile bu kadar çok kitabı var. Bunların çoğunu birçok kez okumuşluğu var. En sevdiği kitaplardı.</Tr>
   </LocalText>
   <LocalText name="fathersBooks">
-    <En>There are so many of them. I don't have time to read arbitrary books.</En>
+    <En>There are so many of them. I don't have time to read random books.</En>
     <Tr>Çok fazlalar. Rastgele kitap okumak için vaktim yok.</Tr>
   </LocalText>
   <LocalText name="aleName">
@@ -372,19 +407,19 @@
     <Tr>İçki</Tr>
   </LocalText>
   <LocalText name="aleDescription">
-    <En>Eww! Definitely not a water! Probably it was some kind of wine in some point of its life.</En>
+    <En>Eww! Definitely not water! Probably it was a kind of wine in some point of its lifespan.</En>
     <Tr>Öff! Bu kesinlikle su değil! Hayatının bir döneminde bir çeşit şaraptı sanırım.</Tr>
   </LocalText>
   <LocalText name="aleText">
     <En>I'm NOT drinking that!</En>
-    <Tr>Bunu ASLA içmeyeceğim!</Tr>
+    <Tr>Bunu içecek değilim!</Tr>
   </LocalText>
   <LocalText name="dirtyTableName">
     <En>Dirty table</En>
     <Tr>Pis masa</Tr>
   </LocalText>
   <LocalText name="dirtyTableDescription">
-    <En>Ugh... If I would left a dinner table in this condition he would yell at me for an hour.</En>
+    <En>Ugh... If I would left a dinner table in this condition he would yell at me for hours.</En>
     <Tr>Pff... Yemek masasını bu halde bırakmış olsaydım bir saat boyunca bana bağırırdı.</Tr>
   </LocalText>
   <LocalText name="dirtyTableText">
@@ -400,7 +435,7 @@
     <Tr>Duvara saplanmış, kağıt parçasını tutan bir bıçak.</Tr>
   </LocalText>
   <LocalText name="knifeText">
-    <En>It's stuck! I cannot pull it out.</En>
+    <En>It's stuck! I can not pull it out.</En>
     <Tr>Sıkışmış! Çıkaramıyorum.</Tr>
   </LocalText>
   <LocalText name="bookBoxName">
@@ -416,8 +451,8 @@
     <Tr>Yeni gramafon</Tr>
   </LocalText>
   <LocalText name="newGramaphoneDescription">
-    <En>This one does not seems so old but I don't think its working.</En>
-    <Tr>Bu o kadar da eski görünmüyor fakat çalıştığını sanmıyorum.</Tr>
+    <En>This one does not look so old but I don't think its working.</En>
+    <Tr>O kadar da eski görünmüyor fakat çalıştığını sanmıyorum.</Tr>
   </LocalText>
   <LocalText name="newGramaphoneText">
     <En>Nah, the old one is better.</En>
@@ -428,11 +463,11 @@
     <Tr>Müzik kutusu</Tr>
   </LocalText>
   <LocalText name="musicBoxDescription">
-    <En>A music box. I had one just like this when I was a kid.</En>
+    <En>A music box. I remember playing with this one when I was a kid.</En>
     <Tr>Bir müzik kutusu. Küçükken aynısından bende de vardı.</Tr>
   </LocalText>
   <LocalText name="musicBoxText">
-    <En>Hmm... The balerine is not turning. Must be broken.</En>
+    <En>Hmm... The balerine is not spinning. Must be broken.</En>
     <Tr>Hmm... Balerin dönmüyor. Bozulmuş olmalı.</Tr>
   </LocalText>
   <LocalText name="fileCabinetName">
@@ -444,7 +479,7 @@
     <Tr>Eski bir dosya dolabı.</Tr>
   </LocalText>
   <LocalText name="fileCabinetText">
-    <En>It's stuck, I cannot open it.</En>
+    <En>It's stuck, I can't open it.</En>
     <Tr>Sıkışmış, açamıyorum.</Tr>
   </LocalText>
   <LocalText name="gardeningName">
@@ -452,7 +487,7 @@
     <Tr>Bahçivanlık</Tr>
   </LocalText>
   <LocalText name="gardeningDescription">
-    <En>Gardenin. Huh, I didn't know my father was into gardening.</En>
+    <En>Gardening. Huh, I didn't know my father was into gardening.</En>
     <Tr>Bahçivanlık. Hmm, babamın bahçivanlık ile ilgilendiğini bilmiyordum.</Tr>
   </LocalText>
   <LocalText name="oldBookName">
@@ -460,7 +495,7 @@
     <Tr>Garip kitap</Tr>
   </LocalText>
   <LocalText name="oldBookDescription">
-    <En>A weird old book.</En>
+    <En>A weird, old book.</En>
     <Tr>Eski, garip bir kitap.</Tr>
   </LocalText>
   <LocalText name="deansElectronicsName">
@@ -484,41 +519,59 @@
     <Tr>Edgar Allan Poe Toplu Eserleri</Tr>
   </LocalText>
   <LocalText name="poeDescription">
-    <En>Anthology of Edgar Allan Poe. Father used to read this book to me at bed - time.</En>
-    <Tr>Edgar Allan Poe Toplu Eserleri. Küçükken babam yatmadan, masal niyetine bu kitabı okurdu.</Tr>
+    <En>Anthology of Edgar Allan Poe. Father used to read me to sleep with this book.</En>
+    <Tr>Edgar Allan Poe Toplu Eserleri. Küçükken, babam yatmadan masal niyetine bu kitabı okurdu.</Tr>
   </LocalText>
   <LocalText name="poeText">
-    <En>I would love to but I really don't have time.</En>
+    <En>I would love to, but I really don't have time.</En>
     <Tr>Çok isterdim fakat gerçekten zamanım yok.</Tr>
   </LocalText>
   <LocalText name="keySpawn">
-    <En>Something is fell in the other room!</En>
-    <Tr>Yan odada bir şey düştü!</Tr>
+    <En>Something moved in the other room as soon as I opened the book!</En>
+    <Tr>Kitabı açar açmaz yan odada bir şey düştü!</Tr>
+  </LocalText>
+  <LocalText name="divineComedyPage">
+    <En>
+      Nor O so quickly e’er, nor I was written,
+      As he took fire, and burned; and ashes wholly
+      Behoved it that in falling he became.
+      And when he on the ground was thus destroyed,
+      The ashes drew together, and of themselves
+      Into himself they instantly returned.
+    </En>
+    <Tr>
+      O ya da I harfi yazacak zaman dolmadan,
+      adam tutuşup cayır cayır yandı,
+      külleri etrafa dağıldı;
+      böylece yok olduktan sonra yerde,
+      küller kendiliğinden toplandı,
+      yeniden aynı görüntü ortaya çıktı.
+    </Tr>
   </LocalText>
   <LocalText name="outro">
-    <En>And so my journey began...</En>
-    <Tr>Yolculuğum işte böyle başladı...</Tr>
+    <En>Behind the door was my fate. Against the cold wind squeezed between solid rocks, I walked through my dungeon of beliefs.</En>
+    <Tr>Kapının arkasına kaderim yatıyordu. Büyük kayaların arasından rüzgara karşı ilk adımımı atıp inançlarımın zindanındaki yolculuğuma başladım.</Tr>
   </LocalText>
   <LocalText name="credits">
     <En>
       This game was developed by Anton Semchenko
-      and story was written by Doruk Yurtsever
-      for e-bergi.com with purpose of writing
-      a guide about creating games with free assets.
+      Story was written by Doruk Yurtsever
+      Published in e-bergi.com for the purpose of writing
+      a guide about creating games using only free assets.
       As such, most of visual and sound assets were downloaded
       from internet as "royalty free assets".
-      Following assets were used...
+      Assets used can be listed as following:
     </En>
     <Tr>
       Bu oyun Anton Semchenko tarafından
       e-bergi.com için bedavaya oyun geliştirme
-      rehberi yazmak amacı ile geliştirilmiş hikayesi
+      rehberi yazmak amacı ile geliştirilmiş olup, hikayesi
       Doruk Yurtsever tarafından yazılmıştır. Bu
       nedenle oyundaki görsellerin ve seslerin tamamına
-      yakın bir kısmı internetten indirilmiştir. Bu ses
-      ve görüntülerin tamamı ticari ürünlerde hiçbir
-      ücret ödemeksizin kullanılabilirler.
-      Kullanılan ses ve görüntüler şu sitelerden indirilmiştir...
+      yakın bir kısmı "royalty free" olarak internetten indirilmiştir.
+      Bu ses ve görüntülerin tamamı ticari ürünlerde, hiçbir
+      ücret ödenmeksizin kullanılabilirler.
+      Kullanılan ses ve görüntüler şu sitelerden derlenmiştir:
     </Tr>
   </LocalText>
   <LocalText name="usedAssets">
@@ -623,7 +676,7 @@
 
       You, for playing,
 
-      And most of all to all good people who
+      And most of all, to all the people who
       created these awesome free assets.
     </En>
     <Tr>

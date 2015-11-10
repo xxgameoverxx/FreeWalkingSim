@@ -53,7 +53,7 @@ public class Entity : MonoBehaviour
 
         if (Vector3.Distance(player.transform.position, transform.position) < distanceToClick)
         {
-            if (Input.GetMouseButtonUp(1))
+            if (Input.GetMouseButtonUp(1) && !ModalPanel.Instance().modalPanelObject.activeSelf)
                 Use();
             if (Input.GetMouseButtonDown(0))
                 uiHolder.WriteText(localizer.Get(description));
@@ -93,7 +93,7 @@ public class Entity : MonoBehaviour
             }
         }
 
-        if (activationItem != string.Empty)
+        if (activationItem != string.Empty && !activated)
         {
             Entity e = Inventory.items.Find(t => t.Name == activationItem);
             if (e == null)

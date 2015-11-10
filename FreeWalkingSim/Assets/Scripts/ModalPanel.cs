@@ -9,15 +9,17 @@ public class PopUpMessage
     public string message;
     public string afterMessage;
     public Action gotTheMessage = null;
+    public bool fadeIn = false;
 
     private ModalPanel modalPanel;
 
     // Yes/No/Cancel: A string, a Yes event, a No event and Cancel event
-    public PopUpMessage(string _message, string _afterMessage = "", Action _gotTheMessage = null)
+    public PopUpMessage(string _message, string _afterMessage = "", Action _gotTheMessage = null, bool _fadeIn = false)
     {
         message = _message;
         afterMessage = _afterMessage;
         gotTheMessage = _gotTheMessage;
+        fadeIn = _fadeIn;
 
         modalPanel = ModalPanel.Instance();
     }
@@ -107,10 +109,32 @@ public class ModalPanel : MonoBehaviour
         messageList.Remove(message);
     }
 
+    private IEnumerator FadeIn()
+    {
+        float duration = 2f; //0.5 secs
+        float currentTime = 0f;
+        while (currentTime < duration)
+        {
+            float alpha = Mathf.Lerp(0f, 1f, currentTime / duration);
+            this.question.color = new Color(this.question.color.r, this.question.color.g, this.question.color.b, alpha);
+            currentTime += Time.deltaTime;
+            yield return null;
+        }
+        yield break;
+    }
+
     private void Popup(PopUpMessage m)
     {
         modalPanelObject.SetActive(true);
+        this.question.color = new Color(0, 0, 0, 0);
         this.question.text = m.message;
+        if (m.fadeIn)
+        {
+            StartCoroutine(FadeIn());
+        }
+        else
+            this.question.color = new Color(0, 0, 0, 255);
+
     }
 
     void ClosePanel()

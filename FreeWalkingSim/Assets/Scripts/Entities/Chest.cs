@@ -19,6 +19,7 @@ public class Chest : Entity
             toBeRemoved.enabled = false;
             transform.parent.GetComponent<Animation>().Play("ChestAnim");
             activated = true;
+            usable = false;
             return true;
         }
         else

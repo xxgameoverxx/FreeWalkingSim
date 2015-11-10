@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour
 
     void OnSceneLoaded()
     {
+        CenterMouse.Instance().UpdateCursor();
         if (Application.loadedLevelName == "GameScene")
             Init();
         else
@@ -169,7 +170,7 @@ public class GameManager : MonoBehaviour
             else
                 tutCountDown -= Time.deltaTime;
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && inGame)
         {
             paused = !paused;
             OnPauseMenu();
