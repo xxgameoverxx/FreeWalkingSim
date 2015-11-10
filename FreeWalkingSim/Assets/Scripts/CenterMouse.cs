@@ -33,6 +33,11 @@ public class CenterMouse : MonoBehaviour
         UpdateCursor();
     }
 
+    void OnApplicationFocused()
+    {
+        UpdateCursor();
+    }
+
     public void UpdateCursor()
     {
         Cursor.SetCursor(Resources.Load<Texture2D>("Sprites/amouse"), Vector2.zero, CursorMode.Auto);
