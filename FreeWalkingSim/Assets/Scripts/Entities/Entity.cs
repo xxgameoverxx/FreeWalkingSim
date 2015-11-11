@@ -59,7 +59,7 @@ public class Entity : MonoBehaviour
                 Use();
             if (Input.GetMouseButtonDown(0) && !ModalPanel.Instance().modalPanelObject.activeSelf)
             {
-                uiHolder.WriteText(localizer.Get(description));
+                uiHolder.WriteText(description);
             }
         }
     }
@@ -76,7 +76,7 @@ public class Entity : MonoBehaviour
         {
             if (!e.activated)
             {
-                uiHolder.WriteText(localizer.Get(notActivatedMessage[i]));
+                uiHolder.WriteText(notActivatedMessage[i]);
                 return false;
             }
             i++;
@@ -86,7 +86,7 @@ public class Entity : MonoBehaviour
             Entity obj = Inventory.items.Find(en => en.Name == e.Name);
             if (obj == null)
             {
-                uiHolder.WriteText(localizer.Get(e.Name) + " " + localizer.Get("objectNeeded"));
+                uiHolder.WriteText(localizer.GetText(e.Name) + " " + localizer.GetText("objectNeeded"), false, false);
                 return false;
             }
             else
@@ -102,7 +102,7 @@ public class Entity : MonoBehaviour
             Entity e = Inventory.items.Find(t => t.Name == activationItem);
             if (e == null)
             {
-                uiHolder.WriteText(localizer.Get(cannotUseText));
+                uiHolder.WriteText(cannotUseText);
                 return false;
             }
             else
@@ -119,7 +119,7 @@ public class Entity : MonoBehaviour
             return false;
         if (Inventory.items.Contains(this))
             Inventory.Remove(this);
-        if (objectToGet != null && !Inventory.items.Contains(objectToGet))
+        if (objectToGet != null && !Inventory.items.Contains(objectToGet) && !activated)
         {
             Inventory.Add(objectToGet);
             objectToGet.gameObject.SetActive(false);
@@ -127,10 +127,10 @@ public class Entity : MonoBehaviour
         activated = true;
         if (usedPopUpMessage != string.Empty)
         {
-            ModalPanel.Instance().Register(new PopUpMessage(localizer.Get(usedPopUpMessage), localizer.Get(usedText)));
+            ModalPanel.Instance().Register(new PopUpMessage(localizer.GetText(usedPopUpMessage), usedText));
         }
         else
-            uiHolder.WriteText(localizer.Get(usedText));
+            uiHolder.WriteText(usedText);
         if (useSound != null)
         {
             if (playOnce != null)

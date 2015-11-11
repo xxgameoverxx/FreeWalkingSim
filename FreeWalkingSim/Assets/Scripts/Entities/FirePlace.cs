@@ -34,7 +34,7 @@ public class FirePlace : Entity
         }
         else if(!activated)
         {
-            uiHolder.WriteText(localizer.Get(cannotUseText));
+            uiHolder.WriteText(cannotUseText);
             return false;
         }
         return true;

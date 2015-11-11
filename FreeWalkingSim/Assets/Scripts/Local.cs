@@ -31,6 +31,6 @@ public class Local : MonoBehaviour
             Debug.LogError("There is no text component on " + this);
             return;
         }
-        txt.text = localizer.Get(textName, localizer.currentLanguage);
+        txt.text = localizer.GetText(textName, localizer.currentLanguage);
     }
 }

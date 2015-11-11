@@ -26,7 +26,7 @@ public class EncodedBook : Entity
             Entity obj = Inventory.items.Find(en => en.Name == e.Name);
             if (obj == null)
             {
-                uiHolder.WriteText(localizer.Get(e.Name) + " " + localizer.Get("objectNeeded"));
+                uiHolder.WriteText(localizer.GetText(e.Name) + " " + localizer.GetText("objectNeeded"));
                 return false;
             }
             else
@@ -42,7 +42,7 @@ public class EncodedBook : Entity
             Entity e = Inventory.items.Find(t => t.Name == activationItem);
             if (e == null)
             {
-                uiHolder.WriteText(localizer.Get(cannotUseText));
+                uiHolder.WriteText(cannotUseText);
                 return false;
             }
             else
@@ -55,7 +55,7 @@ public class EncodedBook : Entity
     private void UseNow()
     {
         if (!CheckItems())
-            uiHolder.WriteText(localizer.Get("encrypted"));
+            uiHolder.WriteText("encrypted");
         else
             PostUse();
 
@@ -79,10 +79,10 @@ public class EncodedBook : Entity
         activated = true;
         if (usedPopUpMessage != string.Empty)
         {
-            ModalPanel.Instance().Register(new PopUpMessage(localizer.Get(usedPopUpMessage), localizer.Get(usedText), null, !used));
+            ModalPanel.Instance().Register(new PopUpMessage(localizer.GetText(usedPopUpMessage), usedText, null, !used));
         }
         else
-            uiHolder.WriteText(localizer.Get(usedText));
+            uiHolder.WriteText(usedText);
         if (useSound != null)
         {
             if (playOnce != null)
@@ -99,7 +99,7 @@ public class EncodedBook : Entity
         {
             if (!e.activated)
             {
-                uiHolder.WriteText(localizer.Get(notActivatedMessage[i]));
+                uiHolder.WriteText(notActivatedMessage[i]);
                 return false;
             }
             i++;

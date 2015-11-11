@@ -42,12 +42,12 @@ public class MainMenu : MonoBehaviour
 
     private void Credits()
     {
-        string credits = Localizer.Instance().Get("credits", "-", false);
-        string usedAssets = Localizer.Instance().Get("usedAssets", "-", false);
-        string usedAssets2 = Localizer.Instance().Get("usedAssets2", "-", false);
-        string usedAssets3 = Localizer.Instance().Get("usedAssets3", "-", false);
-        string thanks = Localizer.Instance().Get("thanks", "-", false);
-        string developer = Localizer.Instance().Get("anton", "-", false);
+        string credits = Localizer.Instance().GetText("credits", "-", false);
+        string usedAssets = Localizer.Instance().GetText("usedAssets", "-", false);
+        string usedAssets2 = Localizer.Instance().GetText("usedAssets2", "-", false);
+        string usedAssets3 = Localizer.Instance().GetText("usedAssets3", "-", false);
+        string thanks = Localizer.Instance().GetText("thanks", "-", false);
+        string developer = Localizer.Instance().GetText("anton", "-", false);
         
 
         if (credits == "ERROR")

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.IO;
 
 public class Candle : Entity
 {
@@ -8,9 +9,9 @@ public class Candle : Entity
 
     void Start()
     {
-        base.Start();
         Name = "candleName";
         description = "candleDescription";
+        base.Start();
         candleLight = transform.FindChild("CandleLight").gameObject;
         candleLight.SetActive(activated);
     }

@@ -46,8 +46,6 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        Screen.fullScreen = true;
-        Screen.SetResolution(1920, 1080, true);
         CenterMouse.Instance().UpdateCursor();
         showTutorialAction += ShowTutorial;
         endGameAction += EndGame;
@@ -79,7 +77,7 @@ public class GameManager : MonoBehaviour
             Inventory.Add(e);
         }
 
-        modalPanel.Register(new PopUpMessage(Localizer.Instance().Get("storySoFar"), Localizer.Instance().Get("storySoFarComment"), showTutorialAction));
+        modalPanel.Register(new PopUpMessage(Localizer.Instance().GetText("storySoFar"), "storySoFarComment", showTutorialAction));
 
         OnPauseMenu();
     }
@@ -96,7 +94,7 @@ public class GameManager : MonoBehaviour
 
     public void SpellBookUsed()
     {
-        UIHolder.Instance().WriteText(Localizer.Instance().Get("keySpawn"));
+        UIHolder.Instance().WriteText("keySpawn");
         goldenKey.SetActive(true);
         foreach (Gramaphone g in FindObjectsOfType<Gramaphone>())
         {
@@ -107,7 +105,7 @@ public class GameManager : MonoBehaviour
 
     public void GoldenDoorOpened()
     {
-        modalPanel.Register(new PopUpMessage(Localizer.Instance().Get("outro"), "", endGameAction));
+        modalPanel.Register(new PopUpMessage(Localizer.Instance().GetText("outro"), "", endGameAction));
     }
 
     private void EndGame()
@@ -180,6 +178,17 @@ public class GameManager : MonoBehaviour
         {
             paused = !paused;
             OnPauseMenu();
+        }
+        if(Input.GetKeyDown(KeyCode.O))
+        {
+            if (inGame)
+                UIHolder.Instance().WriteText("pressed O :/");
+            Screen.SetResolution(1920, 1080, true);
+            Screen.fullScreen = true;
+        }
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            Screen.fullScreen = false;
         }
 
         #region CenterMouse

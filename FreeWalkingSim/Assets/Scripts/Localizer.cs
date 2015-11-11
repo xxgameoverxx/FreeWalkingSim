@@ -47,7 +47,7 @@ public class Localizer : MonoBehaviour
             ChangeLanguage("En");
     }
 
-    public string Get(string text, string language = "-", bool error = true)
+    public string GetText(string text, string language = "-", bool error = true)
     {
         if (language == "-")
             language = currentLanguage;
@@ -59,7 +59,22 @@ public class Localizer : MonoBehaviour
             return "ERROR";
         }
 
-        return localTextDict[text].Get(language);
+        return localTextDict[text].GetText(language);
+    }
+
+    public AudioClip GetSound(string text, string language = "-", bool error = false)
+    {
+        if (language == "-")
+            language = currentLanguage;
+
+        if (!localTextDict.ContainsKey(text))
+        {
+            if (error)
+                Debug.LogError("No text with such name: " + text);
+            return null;
+        }
+
+        return localTextDict[text].GetSound(language, error);
     }
 
     public void ChangeLanguage(string language)
@@ -70,55 +85,38 @@ public class Localizer : MonoBehaviour
 
     void ReadLaguageFile()
     {
-        //using (XmlReader reader = XmlReader.Create("perls.xml"))
-        //{
-        //    while (reader.Read())
-        //    {
-        //        if (reader.IsStartElement())
-        //        {
-        //            switch (reader.Name)
-        //            {
-        //                case "LocalText":
-        //                    if (localTextDict.ContainsKey(reader["name"]))
-        //                    {
-        //                        Debug.LogError(reader["name"] + " is a dublicate!");
-        //                    }
-        //                    else
-        //                    {
-        //                        localTextDict.Add(reader["name"], new LocalText(reader));
-        //                    }
-        //                    break;
-        //            }
-        //        }
-        //    }
-        //}
-
         XElement root = XElement.Load(Application.dataPath + "/Resources/Localization.xml");
 
-        foreach(XElement x in root.Elements())
+        foreach (XElement x in root.Elements())
         {
             if (localTextDict.ContainsKey(x.Attribute("name").Value))
                 Debug.LogError(x.Attribute("name").Value + " is a dublicate!");
             else
-                localTextDict.Add(x.Attribute("name").Value, new LocalText(x));
+            {
+                LocalText newText = new LocalText(x);
+                StartCoroutine(LoadMusic(x, newText));
+                localTextDict.Add(x.Attribute("name").Value, newText);
+            }
         }
-        //XmlDocument xDoc = new XmlDocument();
-        //xDoc.Load(Application.dataPath + "/Resources/Localization.xml");
+    }
 
-        //foreach (XmlNode node in xDoc.ChildNodes)
-        //{
-        //    if (node.Name == "Root")
-        //    {
-        //        foreach (XmlNode childNode in node.ChildNodes)
-        //        {
-        //            if (localTextDict.ContainsKey(childNode.Attributes["name"].Value))
-        //            {
-        //                Debug.LogError(childNode.Attributes["name"].Value + " is a dublicate!");
-        //            }
-        //            localTextDict.Add(childNode.Attributes["name"].Value, new LocalText(childNode));
-        //        }
-        //    }
-        //}
+    IEnumerator LoadMusic(XElement node, LocalText text)
+    {
+        AudioClip clip = null;
+        foreach (XElement element in node.Elements())
+        {
+            string clipName = element.Name.ToString() + "_" + node.Attribute("name").Value;
+            string path = Application.dataPath + "/Resources/Sound/Voice/" + clipName + ".wav";
+            if (File.Exists(path))
+            {
+                WWW www = new WWW("file://" + path);
+                while (!www.isDone)
+                    yield return null;
+                clip = www.GetAudioClip(false, true, AudioType.WAV);
+                clip.name = clipName;
+            }
+            text.sound.Add(element.Name.ToString(), clip);
+        }
     }
 }
 
@@ -128,6 +126,7 @@ public class LocalText
     {
         Name = node.Attribute("name").Value;
         text = new Dictionary<string, string>();
+        sound = new Dictionary<string, AudioClip>();
 
         foreach (XElement element in node.Elements())
         {
@@ -135,22 +134,14 @@ public class LocalText
             if (element.Name.ToString() == "En")
                 originalText = element.Value;
         }
-
-        //Name = node.Attributes["name"].Value;
-        //text = new Dictionary<string, string>();
-        //foreach (XmlNode childNode in node.ChildNodes)
-        //{
-        //    text.Add(childNode.Name, childNode.InnerText);
-        //    if (childNode.Name == "En")
-        //        originalText = childNode.InnerText;
-        //}
     }
 
     public string Name;
     string originalText;
     Dictionary<string, string> text;
+    public Dictionary<string, AudioClip> sound;
 
-    public string Get(string language = "En")
+    public string GetText(string language = "En")
     {
         string localText = text["En"];
 
@@ -160,5 +151,17 @@ public class LocalText
             localText = text[language];
 
         return localText;
+    }
+
+    public AudioClip GetSound(string language = "En", bool error = false)
+    {
+        AudioClip localSound = sound["En"];
+
+        if (sound[language] == null && error)
+            Debug.LogError("No " + language + " sound translation of " + originalText);
+        else
+            localSound = sound[language];
+
+        return localSound;
     }
 }
