@@ -24,8 +24,9 @@ public class PopUpMessage
         modalPanel = ModalPanel.Instance();
     }
 
-    public void Unregister()
+    public IEnumerator Unregister()
     {
+        yield return new WaitForEndOfFrame();
         modalPanel.Unregister(this);
     }
 }
@@ -74,7 +75,7 @@ public class ModalPanel : MonoBehaviour
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && messageList.Count > 0)
-            messageList[0].Unregister();
+            StartCoroutine(messageList[0].Unregister());
 
         if (messageList.Count > 0)
         {

@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
-using System.Xml;
+using System.Xml.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using System.IO;
 
 public class Localizer : MonoBehaviour
 {
@@ -69,38 +70,80 @@ public class Localizer : MonoBehaviour
 
     void ReadLaguageFile()
     {
-        XmlDocument xDoc = new XmlDocument();
-        xDoc.Load(Application.dataPath + "/Resources/Localization.xml");
+        //using (XmlReader reader = XmlReader.Create("perls.xml"))
+        //{
+        //    while (reader.Read())
+        //    {
+        //        if (reader.IsStartElement())
+        //        {
+        //            switch (reader.Name)
+        //            {
+        //                case "LocalText":
+        //                    if (localTextDict.ContainsKey(reader["name"]))
+        //                    {
+        //                        Debug.LogError(reader["name"] + " is a dublicate!");
+        //                    }
+        //                    else
+        //                    {
+        //                        localTextDict.Add(reader["name"], new LocalText(reader));
+        //                    }
+        //                    break;
+        //            }
+        //        }
+        //    }
+        //}
 
-        foreach (XmlNode node in xDoc.ChildNodes)
+        XElement root = XElement.Load(Application.dataPath + "/Resources/Localization.xml");
+
+        foreach(XElement x in root.Elements())
         {
-            if (node.Name == "Root")
-            {
-                foreach (XmlNode childNode in node.ChildNodes)
-                {
-                    if (localTextDict.ContainsKey(childNode.Attributes["name"].Value))
-                    {
-                        Debug.LogError(childNode.Attributes["name"].Value + " is a dublicate!");
-                    }
-                    localTextDict.Add(childNode.Attributes["name"].Value, new LocalText(childNode));
-                }
-            }
+            if (localTextDict.ContainsKey(x.Attribute("name").Value))
+                Debug.LogError(x.Attribute("name").Value + " is a dublicate!");
+            else
+                localTextDict.Add(x.Attribute("name").Value, new LocalText(x));
         }
+        //XmlDocument xDoc = new XmlDocument();
+        //xDoc.Load(Application.dataPath + "/Resources/Localization.xml");
+
+        //foreach (XmlNode node in xDoc.ChildNodes)
+        //{
+        //    if (node.Name == "Root")
+        //    {
+        //        foreach (XmlNode childNode in node.ChildNodes)
+        //        {
+        //            if (localTextDict.ContainsKey(childNode.Attributes["name"].Value))
+        //            {
+        //                Debug.LogError(childNode.Attributes["name"].Value + " is a dublicate!");
+        //            }
+        //            localTextDict.Add(childNode.Attributes["name"].Value, new LocalText(childNode));
+        //        }
+        //    }
+        //}
     }
 }
 
 public class LocalText
 {
-    public LocalText(XmlNode node)
+    public LocalText(XElement node)
     {
-        Name = node.Attributes["name"].Value;
+        Name = node.Attribute("name").Value;
         text = new Dictionary<string, string>();
-        foreach (XmlNode childNode in node.ChildNodes)
+
+        foreach (XElement element in node.Elements())
         {
-            text.Add(childNode.Name, childNode.InnerText);
-            if (childNode.Name == "En")
-                originalText = childNode.InnerText;
+            text.Add(element.Name.ToString(), element.Value);
+            if (element.Name.ToString() == "En")
+                originalText = element.Value;
         }
+
+        //Name = node.Attributes["name"].Value;
+        //text = new Dictionary<string, string>();
+        //foreach (XmlNode childNode in node.ChildNodes)
+        //{
+        //    text.Add(childNode.Name, childNode.InnerText);
+        //    if (childNode.Name == "En")
+        //        originalText = childNode.InnerText;
+        //}
     }
 
     public string Name;

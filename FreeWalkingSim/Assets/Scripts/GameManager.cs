@@ -27,6 +27,10 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
+    public GameObject hoveredGO;
+    public enum HoverState { HOVER, NONE };
+    public HoverState hover_state = HoverState.NONE;
+
     private float tutCountDown = 10;
     public bool inGame = false;
     public bool paused = false;
@@ -42,7 +46,9 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        CenterMouse.Instance().Start();
+        Screen.fullScreen = true;
+        Screen.SetResolution(1920, 1080, true);
+        CenterMouse.Instance().UpdateCursor();
         showTutorialAction += ShowTutorial;
         endGameAction += EndGame;
         if (Application.loadedLevelName == "GameScene")
@@ -175,6 +181,35 @@ public class GameManager : MonoBehaviour
             paused = !paused;
             OnPauseMenu();
         }
+
+        #region CenterMouse
+
+        RaycastHit hitInfo = new RaycastHit();
+        Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
+
+        if (Physics.Raycast(ray, out hitInfo))
+        {
+            if (hover_state == HoverState.NONE)
+            {
+                hoveredGO = hitInfo.collider.gameObject;
+            }
+            hover_state = HoverState.HOVER;
+        }
+
+        if(hitInfo.collider != null && (hitInfo.collider.gameObject != hoveredGO || hitInfo.distance > 3))
+        {
+            if (hover_state == HoverState.HOVER)
+            {
+                hoveredGO.SendMessage("MouseExit", SendMessageOptions.DontRequireReceiver);
+            }
+            hover_state = HoverState.NONE;
+        }
+
+        if (hover_state == HoverState.HOVER)
+        {
+            hitInfo.collider.SendMessage("MouseOver", SendMessageOptions.DontRequireReceiver); //Mouse is hovering
+        }
+        #endregion
     }
 
 }

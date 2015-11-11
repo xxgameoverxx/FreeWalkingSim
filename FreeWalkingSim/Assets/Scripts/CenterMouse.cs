@@ -40,7 +40,6 @@ public class CenterMouse : MonoBehaviour
 
     public void UpdateCursor()
     {
-        Cursor.SetCursor(Resources.Load<Texture2D>("Sprites/amouse"), Vector2.zero, CursorMode.Auto);
         if (Application.loadedLevelName == "GameScene" && !GameManager.Instance().paused)
         {
             Cursor.lockState = CursorLockMode.Locked;
@@ -55,7 +54,7 @@ public class CenterMouse : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if(Input.GetKeyDown(KeyCode.C))
             UpdateCursor();
     }
 }

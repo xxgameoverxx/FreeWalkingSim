@@ -5,6 +5,8 @@ using UnityStandardAssets.Characters.FirstPerson;
 
 public class Entity : MonoBehaviour
 {
+
+
     private FirstPersonController player;
     private Material mat;
 
@@ -44,7 +46,7 @@ public class Entity : MonoBehaviour
         localizer = Localizer.Instance();
     }
 
-    public void OnMouseOver()
+    public void MouseOver()
     {
         if (Vector3.Distance(transform.position, player.transform.position) < distanceToSee && mat != null)
         {
@@ -55,12 +57,14 @@ public class Entity : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(1) && !ModalPanel.Instance().modalPanelObject.activeSelf)
                 Use();
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && !ModalPanel.Instance().modalPanelObject.activeSelf)
+            {
                 uiHolder.WriteText(localizer.Get(description));
+            }
         }
     }
 
-    public void OnMouseExit()
+    public void MouseExit()
     {
         mat.SetColor("_EmissionColor", new Color(0, 0, 0));
     }
@@ -115,7 +119,7 @@ public class Entity : MonoBehaviour
             return false;
         if (Inventory.items.Contains(this))
             Inventory.Remove(this);
-        if (objectToGet != null)
+        if (objectToGet != null && !Inventory.items.Contains(objectToGet))
         {
             Inventory.Add(objectToGet);
             objectToGet.gameObject.SetActive(false);
